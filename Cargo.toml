@@ -68,6 +68,48 @@ memmap2 = "0.9"
 rustix = { version = "1", features = ["fs", "std", "system"] }
 [lib]
 bench = false
+[[test]]
+name = "codec_roundtrip"
+required-features = ["codecs"]
+[[test]]
+name = "codec_stream_tolerance"
+required-features = ["codecs"]
+[[test]]
+name = "conformance"
+required-features = ["codecs"]
+[[test]]
+name = "dimse_loopback"
+required-features = ["net"]
+[[test]]
+name = "interop_dcmtk"
+required-features = ["net"]
+[[test]]
+name = "progressive_crew_planes"
+required-features = ["render"]
+[[test]]
+name = "progressive_shared_planes"
+required-features = ["render"]
+[[test]]
+name = "store_payload_bytes"
+required-features = ["render"]
+[[test]]
+name = "ul_loopback"
+required-features = ["net"]
+[[test]]
+name = "untrusted_input"
+required-features = ["codecs", "net"]
+[[test]]
+name = "untrusted_jpegxl"
+required-features = ["jpeg-xl"]
+[[test]]
+name = "untrusted_limits"
+required-features = ["net"]
+[[test]]
+name = "untrusted_regressions"
+required-features = ["net"]
+[[test]]
+name = "volume_link_race"
+required-features = ["render"]
 [package.metadata.docs.rs]
 all-features = true
 [dev-dependencies]

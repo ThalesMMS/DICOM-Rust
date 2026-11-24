@@ -1,0 +1,351 @@
+{"args":["","multi",[]],"fn":"Decode","ok":""}
+{"args":["","multi",[0,97,98]],"fn":"Decode","ok":"\u0000ab"}
+{"args":["","multi",[27]],"fn":"Decode","ok":"\u001b"}
+{"args":["","multi",[27,36]],"fn":"Decode","ok":"\u001b$"}
+{"args":["","multi",[27,36,40,67,34,102,27,40,66,32,49,48]],"fn":"Decode","ok":"\u001b$(C\"f\u001b(B 10"}
+{"args":["","multi",[27,36,40,68,41,36,27,40,66,97,108]],"fn":"Decode","ok":"\u001b$(D)$\u001b(Bal"}
+{"args":["","multi",{"$hex":"1b24284429282b511b2842641b2428442b751b2842"}],"fn":"Decode","ok":"\u001b$(D)(+Q\u001b(Bd\u001b$(D+u\u001b(B"}
+{"args":["","multi",[27,36,40,68,42,39,27,40,66,100,97]],"fn":"Decode","ok":"\u001b$(D*'\u001b(Bda"}
+{"args":["","multi",{"$hex":"1b2428442a2d1b2842651b2428442b5e1b284274696e61"}],"fn":"Decode","ok":"\u001b$(D*-\u001b(Be\u001b$(D+^\u001b(Btina"}
+{"args":["","multi",{"$hex":"1b2428442a2e1b2842611b2428442b3b1b2842721b24284429451b2842201b2428442a5f1b2842656b6572"}],"fn":"Decode","ok":"\u001b$(D*.\u001b(Ba\u001b$(D+;\u001b(Br\u001b$(D)E\u001b(B \u001b$(D*_\u001b(Beker"}
+{"args":["","multi",[27,36,40,68,43,115,41,80,27,40,66]],"fn":"Decode","ok":"\u001b$(D+s)P\u001b(B"}
+{"args":["","multi",[27,36,40,68,48,33,27,40,66]],"fn":"Decode","ok":"\u001b$(D0!\u001b(B"}
+{"args":["","multi",[27,36,40,68,48,33,108,63,27,40,66]],"fn":"Decode","ok":"\u001b$(D0!l?\u001b(B"}
+{"args":["","multi",[27,36,66,33,38,33,61,27,40,66]],"fn":"Decode","ok":"\u001b$B!&!=\u001b(B"}
+{"args":["","multi",{"$hex":"1b24422625264b264b2647264d2649264a1b24284426711b2842"}],"fn":"Decode","ok":"\u001b$B&%&K&K&G&M&I&J\u001b$(D&q\u001b(B"}
+{"args":["","multi",{"$hex":"1b24422732276527632763275c275a275b1b2842"}],"fn":"Decode","ok":"\u001b$B'2'e'c'c'\\'Z'[\u001b(B"}
+{"args":["","multi",{"$hex":"1b244232261b28423d1b244232261b28423d1b244232261b2842"}],"fn":"Decode","ok":"\u001b$B2&\u001b(B=\u001b$B2&\u001b(B=\u001b$B2&\u001b(B"}
+{"args":["","multi",{"$hex":"1b24423b331b28420d0a1b24423b331b2842"}],"fn":"Decode","ok":"\u001b$B;3\u001b(B\r\n\u001b$B;3\u001b(B"}
+{"args":["","multi",[27,36,66,59,51,69,68]],"fn":"Decode","ok":"\u001b$B;3ED"}
+{"args":["","multi",[27,36,81]],"fn":"Decode","ok":"\u001b$Q"}
+{"args":["","multi",[27,40,74,92,126,27,40,66]],"fn":"Decode","ok":"\u001b(J\\~\u001b(B"}
+{"args":["","multi",[32,32,115,112,97,99,101,100,32,32]],"fn":"Decode","ok":"  spaced  "}
+{"args":["","multi",[61,27,36,66,59,51,27,40,66,61]],"fn":"Decode","ok":"=\u001b$B;3\u001b(B="}
+{"args":["","multi",[65,98,61,27,36,66,59,51,27,40,66,92,67,100]],"fn":"Decode","ok":"Ab=\u001b$B;3\u001b(B\\Cd"}
+{"args":["","multi",[68,111,101,94,74,111,104,110]],"fn":"Decode","ok":"Doe^John"}
+{"args":["","multi",{"$hex":"486f6e675e47696c646f6e673d1b2442393f1b28425e1b2442354846361b28423d1b242843482b1b28425e1b2428433166353f1b2842"}],"fn":"Decode","ok":"Hong^Gildong=\u001b$B9?\u001b(B^\u001b$B5HF6\u001b(B=\u001b$(CH+\u001b(B^\u001b$(C1f5?\u001b(B"}
+{"args":["","multi",{"$hex":"4d1b2428442b641b28426c6c65725e4a1b2428442b641b28427267656e"}],"fn":"Decode","ok":"M\u001b$(D+d\u001b(Bller^J\u001b$(D+d\u001b(Brgen"}
+{"args":["","multi",{"$hex":"57616e675e5869616f446f6e673d1b244232261b28425e1b24423e2e456c1b28423d"}],"fn":"Decode","ok":"Wang^XiaoDong=\u001b$B2&\u001b(B^\u001b$B>.El\u001b(B="}
+{"args":["","multi",{"$hex":"5a68616e675e53616e46656e673d1b24284155451b28425e1b24423b301b242844302d1b2842"}],"fn":"Decode","ok":"Zhang^SanFeng=\u001b$(AUE\u001b(B^\u001b$B;0\u001b$(D0-\u001b(B"}
+{"args":["","multi",[92,126]],"fn":"Decode","ok":"\\~"}
+{"args":["","multi",[94,27,36,66,59,51,27,40,66]],"fn":"Decode","ok":"^\u001b$B;3\u001b(B"}
+{"args":["","multi",[94,61,92]],"fn":"Decode","ok":"^=\\"}
+{"args":["","multi",[97,92,98,92,99]],"fn":"Decode","ok":"a\\b\\c"}
+{"args":["","multi",[97,98,27,40,74,99,92,27,40,66]],"fn":"Decode","ok":"ab\u001b(Jc\\\u001b(B"}
+{"args":["","multi",[116,97,98,9,104,101,114,101,13,10,108,105,110,101]],"fn":"Decode","ok":"tab\there\r\nline"}
+{"args":["","multi",[120,61,27,40,66]],"fn":"Decode","ok":"x=\u001b(B"}
+{"args":["","multi",[120,92,27,36,66,59,51,27,40,66,92,121]],"fn":"Decode","ok":"x\\\u001b$B;3\u001b(B\\y"}
+{"args":["","multi",[127]],"fn":"Decode","ok":""}
+{"args":["ISO_IR 100","multi",[27,45,70,225,226]],"fn":"Decode","ok":"\u001b-Fáâ"}
+{"args":["ISO_IR 100","multi",[65,98,61,142,82,92,67,100]],"fn":"Decode","ok":"Ab=R\\Cd"}
+{"args":["ISO_IR 100","multi",[65,98,61,187,179,92,67,100]],"fn":"Decode","ok":"Ab=»³\\Cd"}
+{"args":["ISO_IR 100","multi",[65,98,61,201,189,92,67,100]],"fn":"Decode","ok":"Ab=É½\\Cd"}
+{"args":["ISO_IR 100","multi",[65,98,61,223,163,92,67,100]],"fn":"Decode","ok":"Ab=ß£\\Cd"}
+{"args":["ISO_IR 100","multi",[65,98,61,229,177,177,92,67,100]],"fn":"Decode","ok":"Ab=å±±\\Cd"}
+{"args":["ISO_IR 100","multi",{"$hex":"486f6e675e47696c646f6e673d1b242943fbf35e1b242943d1ced4d73d1b242943c8ab5e1b242943b1e6b5bf"}],"fn":"Decode","ok":"Hong^Gildong=\u001b$)Cûó^\u001b$)CÑÎÔ×=\u001b$)CÈ«^\u001b$)C±æµ¿"}
+{"args":["ISO_IR 100","multi",{"$hex":"486f6e675e47696c646f6e673dbae95ebcaab6b43d83369c345e82388a3382399c34"}],"fn":"Decode","ok":"Hong^Gildong=ºé^¼ª¶´=64^8394"}
+{"args":["ISO_IR 100","multi",{"$hex":"486f6e675e47696c646f6e673de6b4aa5ee59089e6b49e3ded998d5eeab8b8eb8f99"}],"fn":"Decode","ok":"Hong^Gildong=æ´ª^åæ´=í^ê¸¸ë"}
+{"args":["ISO_IR 100","multi",{"$hex":"486f6e675e47696c646f6e673dfbf35ed1ced4d73dc8ab5eb1e6b5bf"}],"fn":"Decode","ok":"Hong^Gildong=ûó^ÑÎÔ×=È«^±æµ¿"}
+{"args":["ISO_IR 100","multi",{"$hex":"4d8fabe46c6c65725e4a8fabe47267656e"}],"fn":"Decode","ok":"M«äller^J«ärgen"}
+{"args":["ISO_IR 100","multi",[77,168,185,108,108,101,114,94,74,168,185,114,103,101,110]],"fn":"Decode","ok":"M¨¹ller^J¨¹rgen"}
+{"args":["ISO_IR 100","multi",[77,195,188,108,108,101,114,94,74,195,188,114,103,101,110]],"fn":"Decode","ok":"MÃ¼ller^JÃ¼rgen"}
+{"args":["ISO_IR 100","multi",[77,252,108,108,101,114,94,74,252,114,103,101,110]],"fn":"Decode","ok":"Müller^Jürgen"}
+{"args":["ISO_IR 100","multi",{"$hex":"57616e675e5869616f446f6e673d89a45e8fac938c3d"}],"fn":"Decode","ok":"Wang^XiaoDong=¤^¬="}
+{"args":["ISO_IR 100","multi",{"$hex":"57616e675e5869616f446f6e673db2a65ebeaec5ec3d"}],"fn":"Decode","ok":"Wang^XiaoDong=²¦^¾®Åì="}
+{"args":["ISO_IR 100","multi",{"$hex":"57616e675e5869616f446f6e673dcdf55ed0a1967c3d"}],"fn":"Decode","ok":"Wang^XiaoDong=Íõ^Ð¡|="}
+{"args":["ISO_IR 100","multi",{"$hex":"57616e675e5869616f446f6e673de78e8b5ee5b08fe69db13d"}],"fn":"Decode","ok":"Wang^XiaoDong=ç^å°æ±="}
+{"args":["ISO_IR 100","multi",{"$hex":"57616e675e5869616f446f6e673de8dd5ee1b3d4d43d"}],"fn":"Decode","ok":"Wang^XiaoDong=èÝ^á³ÔÔ="}
+{"args":["ISO_IR 100","multi",{"$hex":"59616d6164615e5461726f753d8e5293635e91be98593d82e282dc82be5e82bd82eb82a4"}],"fn":"Decode","ok":"Yamada^Tarou=Rc^¾Y=âÜ¾^½ë¤"}
+{"args":["ISO_IR 100","multi",{"$hex":"59616d6164615e5461726f753dbbb3c5c45ec2c0cfba3da4e4a4dea4c05ea4bfa4eda4a6"}],"fn":"Decode","ok":"Yamada^Tarou=»³ÅÄ^ÂÀÏº=¤ä¤Þ¤À^¤¿¤í¤¦"}
+{"args":["ISO_IR 100","multi",{"$hex":"59616d6164615e5461726f753dc9bdccef5eccabc0c93da4e4a4dea4c05ea4bfa4eda4a6"}],"fn":"Decode","ok":"Yamada^Tarou=É½Ìï^Ì«ÀÉ=¤ä¤Þ¤À^¤¿¤í¤¦"}
+{"args":["straße","STRASS",[42,1]],"error":"dicom: unsupported specific character set: \"STRAßE\"","fn":"Decode"}
+{"args":["a:b:c","straße",[2,255]],"error":"dicom: unsupported specific character set: \"A:B:C\"","fn":"Decode"}
+{"args":["ΣΊΣΥΦΟΣ","HELLO",[1,1]],"error":"dicom: unsupported specific character set: \"ΣΊΣΥΦΟΣ\"","fn":"Decode"}
+{"args":["straße./x/**/*.json","n",[7,2]],"error":"dicom: unsupported specific character set: \"STRAßE./X/**/*.JSON\"","fn":"Decode"}
+{"args":["./x/**/*.json","ON",[255,0]],"error":"dicom: unsupported specific character set: \"./X/**/*.JSON\"","fn":"Decode"}
+{"args":["﻿bom","{name} has {count} itemsline1\nline2",[2,0]],"error":"dicom: unsupported specific character set: \"\\ufeffBOM\"","fn":"Decode"}
+{"args":["tab\tseparatedé","straße",[]],"error":"dicom: unsupported specific character set: \"TAB SEPARATEDÉ\"","fn":"Decode"}
+{"args":["ab","emoji 👍🏽 mix",[1,2]],"error":"dicom: unsupported specific character set: \"AB\"","fn":"Decode"}
+{"args":["a😀b😀chello","é",[]],"error":"dicom: unsupported specific character set: \"A😀B😀CHELLO\"","fn":"Decode"}
+{"args":[":","ΣΊΣΥΦΟΣ",[]],"error":"dicom: unsupported specific character set: \":\"","fn":"Decode"}
+{"args":["{name} has {count} items"," has {count} items",[0]],"error":"dicom: unsupported specific character set: \"{NAME} HAS {COUNT} ITEMS\"","fn":"Decode"}
+{"args":["Hello World","ΣΊΣΥΦΟΣ",[]],"error":"dicom: unsupported specific character set: \"HELLO WORLD\"","fn":"Decode"}
+{"args":["HELLO","abc",[2]],"error":"dicom: unsupported specific character set: \"HELLO\"","fn":"Decode"}
+{"args":["a😀b😀c","emoji 👍🏽 mix",[0,7,2]],"error":"dicom: unsupported specific character set: \"A😀B😀C\"","fn":"Decode"}
+{"args":["tab\tse","tab\tseparated﻿bom",[1,255,42]],"error":"dicom: unsupported specific character set: \"TAB SE\"","fn":"Decode"}
+{"args":["ns:key.path😀",":",[255]],"error":"dicom: unsupported specific character set: \"NS:KEY.PATH😀\"","fn":"Decode"}
+{"args":["hello worlda.b.c","é",[255]],"error":"dicom: unsupported specific character set: \"HELLO WORLDA.B.C\"","fn":"Decode"}
+{"args":["a.b.chello","日本語のテキスト",[]],"error":"dicom: unsupported specific character set: \"A.B.CHELLO\"","fn":"Decode"}
+{"args":["abhello","  padded  ",[2]],"error":"dicom: unsupported specific character set: \"ABHELLO\"","fn":"Decode"}
+{"args":[":straße","aße",[0]],"error":"dicom: unsupported specific character set: \":STRAßE\"","fn":"Decode"}
+{"args":["","multi",[]],"fn":"DecodeReplacing","ok":{"text":"","replaced":false}}
+{"args":["","multi",[0,97,98]],"fn":"DecodeReplacing","ok":{"text":"\u0000ab","replaced":false}}
+{"args":["","multi",[27]],"fn":"DecodeReplacing","ok":{"text":"\u001b","replaced":false}}
+{"args":["","multi",[27,36]],"fn":"DecodeReplacing","ok":{"text":"\u001b$","replaced":false}}
+{"args":["","multi",[27,36,40,67,34,102,27,40,66,32,49,48]],"fn":"DecodeReplacing","ok":{"text":"\u001b$(C\"f\u001b(B 10","replaced":false}}
+{"args":["","multi",[27,36,40,68,41,36,27,40,66,97,108]],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D)$\u001b(Bal","replaced":false}}
+{"args":["","multi",{"$hex":"1b24284429282b511b2842641b2428442b751b2842"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D)(+Q\u001b(Bd\u001b$(D+u\u001b(B","replaced":false}}
+{"args":["","multi",[27,36,40,68,42,39,27,40,66,100,97]],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D*'\u001b(Bda","replaced":false}}
+{"args":["","multi",{"$hex":"1b2428442a2d1b2842651b2428442b5e1b284274696e61"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D*-\u001b(Be\u001b$(D+^\u001b(Btina","replaced":false}}
+{"args":["","multi",{"$hex":"1b2428442a2e1b2842611b2428442b3b1b2842721b24284429451b2842201b2428442a5f1b2842656b6572"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D*.\u001b(Ba\u001b$(D+;\u001b(Br\u001b$(D)E\u001b(B \u001b$(D*_\u001b(Beker","replaced":false}}
+{"args":["","multi",[27,36,40,68,43,115,41,80,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D+s)P\u001b(B","replaced":false}}
+{"args":["","multi",[27,36,40,68,48,33,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D0!\u001b(B","replaced":false}}
+{"args":["","multi",[27,36,40,68,48,33,108,63,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"\u001b$(D0!l?\u001b(B","replaced":false}}
+{"args":["","multi",[27,36,66,33,38,33,61,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"\u001b$B!&!=\u001b(B","replaced":false}}
+{"args":["","multi",{"$hex":"1b24422625264b264b2647264d2649264a1b24284426711b2842"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$B&%&K&K&G&M&I&J\u001b$(D&q\u001b(B","replaced":false}}
+{"args":["","multi",{"$hex":"1b24422732276527632763275c275a275b1b2842"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$B'2'e'c'c'\\'Z'[\u001b(B","replaced":false}}
+{"args":["","multi",{"$hex":"1b244232261b28423d1b244232261b28423d1b244232261b2842"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$B2&\u001b(B=\u001b$B2&\u001b(B=\u001b$B2&\u001b(B","replaced":false}}
+{"args":["","multi",{"$hex":"1b24423b331b28420d0a1b24423b331b2842"}],"fn":"DecodeReplacing","ok":{"text":"\u001b$B;3\u001b(B\r\n\u001b$B;3\u001b(B","replaced":false}}
+{"args":["","multi",[27,36,66,59,51,69,68]],"fn":"DecodeReplacing","ok":{"text":"\u001b$B;3ED","replaced":false}}
+{"args":["","multi",[27,36,81]],"fn":"DecodeReplacing","ok":{"text":"\u001b$Q","replaced":false}}
+{"args":["","multi",[27,40,74,92,126,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"\u001b(J\\~\u001b(B","replaced":false}}
+{"args":["","multi",[27,45,70,225,226]],"fn":"DecodeReplacing","ok":{"text":"\u001b-F�","replaced":true}}
+{"args":["","multi",[32,32,115,112,97,99,101,100,32,32]],"fn":"DecodeReplacing","ok":{"text":"  spaced  ","replaced":false}}
+{"args":["","multi",[61,27,36,66,59,51,27,40,66,61]],"fn":"DecodeReplacing","ok":{"text":"=\u001b$B;3\u001b(B=","replaced":false}}
+{"args":["","multi",[65,98,61,27,36,66,59,51,27,40,66,92,67,100]],"fn":"DecodeReplacing","ok":{"text":"Ab=\u001b$B;3\u001b(B\\Cd","replaced":false}}
+{"args":["","multi",[65,98,61,142,82,92,67,100]],"fn":"DecodeReplacing","ok":{"text":"Ab=�R\\Cd","replaced":true}}
+{"args":["","multi",[65,98,61,187,179,92,67,100]],"fn":"DecodeReplacing","ok":{"text":"Ab=�\\Cd","replaced":true}}
+{"args":["","multi",[68,111,101,94,74,111,104,110]],"fn":"DecodeReplacing","ok":{"text":"Doe^John","replaced":false}}
+{"args":["","multi",{"$hex":"486f6e675e47696c646f6e673d1b242943fbf35e1b242943d1ced4d73d1b242943c8ab5e1b242943b1e6b5bf"}],"fn":"DecodeReplacing","ok":{"text":"Hong^Gildong=\u001b$)C�^\u001b$)C�=\u001b$)C�^\u001b$)C�","replaced":true}}
+{"args":["","multi",{"$hex":"486f6e675e47696c646f6e673d1b2442393f1b28425e1b2442354846361b28423d1b242843482b1b28425e1b2428433166353f1b2842"}],"fn":"DecodeReplacing","ok":{"text":"Hong^Gildong=\u001b$B9?\u001b(B^\u001b$B5HF6\u001b(B=\u001b$(CH+\u001b(B^\u001b$(C1f5?\u001b(B","replaced":false}}
+{"args":["","multi",{"$hex":"486f6e675e47696c646f6e673dbae95ebcaab6b43d83369c345e82388a3382399c34"}],"fn":"DecodeReplacing","ok":{"text":"Hong^Gildong=�^�=�6�4^�8�3�9�4","replaced":true}}
+{"args":["","multi",{"$hex":"486f6e675e47696c646f6e673de6b4aa5ee59089e6b49e3ded998d5eeab8b8eb8f99"}],"fn":"DecodeReplacing","ok":{"text":"Hong^Gildong=�^�=�^�","replaced":true}}
+{"args":["","multi",{"$hex":"4d1b2428442b641b28426c6c65725e4a1b2428442b641b28427267656e"}],"fn":"DecodeReplacing","ok":{"text":"M\u001b$(D+d\u001b(Bller^J\u001b$(D+d\u001b(Brgen","replaced":false}}
+{"args":["","multi",{"$hex":"4d8fabe46c6c65725e4a8fabe47267656e"}],"fn":"DecodeReplacing","ok":{"text":"M�ller^J�rgen","replaced":true}}
+{"args":["","multi",{"$hex":"57616e675e5869616f446f6e673d1b244232261b28425e1b24423e2e456c1b28423d"}],"fn":"DecodeReplacing","ok":{"text":"Wang^XiaoDong=\u001b$B2&\u001b(B^\u001b$B>.El\u001b(B=","replaced":false}}
+{"args":["","multi",{"$hex":"57616e675e5869616f446f6e673d89a45e8fac938c3d"}],"fn":"DecodeReplacing","ok":{"text":"Wang^XiaoDong=�^�=","replaced":true}}
+{"args":["","multi",{"$hex":"57616e675e5869616f446f6e673dcdf55ed0a1967c3d"}],"fn":"DecodeReplacing","ok":{"text":"Wang^XiaoDong=�^�|=","replaced":true}}
+{"args":["","multi",{"$hex":"59616d6164615e5461726f753d8e5293635e91be98593d82e282dc82be5e82bd82eb82a4"}],"fn":"DecodeReplacing","ok":{"text":"Yamada^Tarou=�R�c^�Y=�^�","replaced":true}}
+{"args":["","multi",{"$hex":"59616d6164615e5461726f753dbbb3c5c45ec2c0cfba3da4e4a4dea4c05ea4bfa4eda4a6"}],"fn":"DecodeReplacing","ok":{"text":"Yamada^Tarou=�^�=�^�","replaced":true}}
+{"args":["","multi",{"$hex":"5a68616e675e53616e46656e673d1b24284155451b28425e1b24423b301b242844302d1b2842"}],"fn":"DecodeReplacing","ok":{"text":"Zhang^SanFeng=\u001b$(AUE\u001b(B^\u001b$B;0\u001b$(D0-\u001b(B","replaced":false}}
+{"args":["","multi",{"$hex":"5a68616e675e53616e46656e673d1b242941d5c55e1b242941c8fdb7e13d1b242941d5c55e1b242941c8fdb7e1"}],"fn":"DecodeReplacing","ok":{"text":"Zhang^SanFeng=\u001b$)A�^\u001b$)A�=\u001b$)A�^\u001b$)A�","replaced":true}}
+{"args":["","multi",{"$hex":"5a68616e675e53616e46656e673dd5c55ec8fdb7e1"}],"fn":"DecodeReplacing","ok":{"text":"Zhang^SanFeng=�^�","replaced":true}}
+{"args":["","multi",[92,126]],"fn":"DecodeReplacing","ok":{"text":"\\~","replaced":false}}
+{"args":["","multi",[94,27,36,66,59,51,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"^\u001b$B;3\u001b(B","replaced":false}}
+{"args":["","multi",[94,61,92]],"fn":"DecodeReplacing","ok":{"text":"^=\\","replaced":false}}
+{"args":["","multi",[97,92,98,92,99]],"fn":"DecodeReplacing","ok":{"text":"a\\b\\c","replaced":false}}
+{"args":["","multi",[97,92,233,92,98]],"fn":"DecodeReplacing","ok":{"text":"a\\�\\b","replaced":true}}
+{"args":["","multi",[97,98,27,40,74,99,92,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"ab\u001b(Jc\\\u001b(B","replaced":false}}
+{"args":["","multi",[97,98,99,27,45,65,233,27,40,66,122]],"fn":"DecodeReplacing","ok":{"text":"abc\u001b-A�\u001b(Bz","replaced":true}}
+{"args":["","multi",[116,97,98,9,104,101,114,101,13,10,108,105,110,101]],"fn":"DecodeReplacing","ok":{"text":"tab\there\r\nline","replaced":false}}
+{"args":["","multi",[120,61,27,40,66]],"fn":"DecodeReplacing","ok":{"text":"x=\u001b(B","replaced":false}}
+{"args":["","multi",[120,92,27,36,66,59,51,27,40,66,92,121]],"fn":"DecodeReplacing","ok":{"text":"x\\\u001b$B;3\u001b(B\\y","replaced":false}}
+{"args":["","multi",[127]],"fn":"DecodeReplacing","ok":{"text":"","replaced":false}}
+{"args":["","multi",[128,32,49,48]],"fn":"DecodeReplacing","ok":{"text":"� 10","replaced":true}}
+{"args":["","multi",[128,129]],"fn":"DecodeReplacing","ok":{"text":"�","replaced":true}}
+{"args":["","multi",[129,48]],"fn":"DecodeReplacing","ok":{"text":"�0","replaced":true}}
+{"args":["","multi",[129,48,129,48]],"fn":"DecodeReplacing","ok":{"text":"�0�0","replaced":true}}
+{"args":["","multi",[129,48,129,53,120]],"fn":"DecodeReplacing","ok":{"text":"�0�5x","replaced":true}}
+{"args":["","multi",[129,48,132,54,129,54,168,50]],"fn":"DecodeReplacing","ok":{"text":"�0�6�6�2","replaced":true}}
+{"args":["","multi",{"$hex":"813087356181308e3672813090332081309435656b6572"}],"fn":"DecodeReplacing","ok":{"text":"�0�5a�0�6r�0�3 �0�5eker","replaced":true}}
+{"args":["a..b","ΣΊΣΥΦΟΣ",[42]],"error":"dicom: unsupported specific character set: \"A..B\"","fn":"DecodeReplacing"}
+{"args":["line1\nline2","ΣΊΣΥΦΟΣ",[]],"error":"dicom: unsupported specific character set: \"LINE1 LINE2\"","fn":"DecodeReplacing"}
+{"args":["  padded  ","a😀b😀c",[0]],"error":"dicom: unsupported specific character set: \"PADDED\"","fn":"DecodeReplacing"}
+{"args":[".leading","key_name-1ab",[]],"error":"dicom: unsupported specific character set: \".LEADING\"","fn":"DecodeReplacing"}
+{"args":["a","日本語のテキスト",[2]],"error":"dicom: unsupported specific character set: \"A\"","fn":"DecodeReplacing"}
+{"args":["a😀b😀c  padded  ","日本語のテキスト",[]],"error":"dicom: unsupported specific character set: \"A😀B😀C PADDED\"","fn":"DecodeReplacing"}
+{"args":["hello worldkey_name-1","a",[]],"error":"dicom: unsupported specific character set: \"HELLO WORLDKEY NAME-1\"","fn":"DecodeReplacing"}
+{"args":[":a","日本語のテキスト",[255]],"error":"dicom: unsupported specific character set: \":A\"","fn":"DecodeReplacing"}
+{"args":["emoji 👍🏽 mix","a",[2,100]],"error":"dicom: unsupported specific character set: \"EMOJI 👍🏽 MIX\"","fn":"DecodeReplacing"}
+{"args":["Hello World😀","RL",[]],"error":"dicom: unsupported specific character set: \"HELLO WORLD😀\"","fn":"DecodeReplacing"}
+{"args":[":",":",[7,1]],"error":"dicom: unsupported specific character set: \":\"","fn":"DecodeReplacing"}
+{"args":["ΣΊΣΥΦΟΣ","trailing.",[]],"error":"dicom: unsupported specific character set: \"ΣΊΣΥΦΟΣ\"","fn":"DecodeReplacing"}
+{"args":["tab\tseparated  padded  ","ab.leading",[]],"error":"dicom: unsupported specific character set: \"TAB SEPARATED PADDED\"","fn":"DecodeReplacing"}
+{"args":["loe","helloé",[7]],"error":"dicom: unsupported specific character set: \"LOE\"","fn":"DecodeReplacing"}
+{"args":["helloline1\nline2",".leading",[42]],"error":"dicom: unsupported specific character set: \"HELLOLINE1 LINE2\"","fn":"DecodeReplacing"}
+{"args":["aünïcödé","trailing.a",[100]],"error":"dicom: unsupported specific character set: \"AÜNÏCÖDÉ\"","fn":"DecodeReplacing"}
+{"args":["a.b.c",".",[]],"error":"dicom: unsupported specific character set: \"A.B.C\"","fn":"DecodeReplacing"}
+{"args":["abc","﻿bom",[]],"error":"dicom: unsupported specific character set: \"ABC\"","fn":"DecodeReplacing"}
+{"args":["src/a/b.ts","HELLO",[1]],"error":"dicom: unsupported specific character set: \"SRC/A/B.TS\"","fn":"DecodeReplacing"}
+{"args":["ns:key.path","a..b",[]],"error":"dicom: unsupported specific character set: \"NS:KEY.PATH\"","fn":"DecodeReplacing"}
+{"args":["","multi",""],"fn":"Encode","ok":""}
+{"args":["","multi","Doe^John"],"fn":"Encode","ok":"RG9lXkpvaG4="}
+{"args":["","multi","a\\b\\c"],"fn":"Encode","ok":"YVxiXGM="}
+{"args":["","multi","tab\there\r\nline"],"fn":"Encode","ok":"dGFiCWhlcmUNCmxpbmU="}
+{"args":["","multi","^=\\"],"fn":"Encode","ok":"Xj1c"}
+{"args":["","multi","  spaced  "],"fn":"Encode","ok":"ICBzcGFjZWQgIA=="}
+{"args":["","multi","x=\u001b(B"],"fn":"Encode","ok":"eD0bKEI="}
+{"args":["","pn",""],"fn":"Encode","ok":null}
+{"args":["ISO_IR 100","multi","Müller^Jürgen"],"fn":"Encode","ok":"TfxsbGVyXkr8cmdlbg=="}
+{"args":["ISO_IR 100","multi","ÿþ"],"fn":"Encode","ok":"//4="}
+{"args":["ISO_IR 100","multi","x"],"fn":"Encode","ok":"hXg="}
+{"args":["ISO_IR 101","multi","Łódź"],"fn":"Encode","ok":"o/NkvA=="}
+{"args":["ISO_IR 101","multi","Čeština"],"fn":"Encode","ok":"yGW5dGluYQ=="}
+{"args":["ISO_IR 109","multi","Çağrı Şeker"],"fn":"Encode","ok":"x2G7crkgqmVrZXI="}
+{"args":["ISO_IR 109","multi","Ħal"],"fn":"Encode","ok":"oWFs"}
+{"args":["ISO_IR 110","multi","Āda"],"fn":"Encode","ok":"wGRh"}
+{"args":["ISO_IR 126","multi","Ελληνικά"],"fn":"Encode","ok":"xevr5+3p6tw="}
+{"args":["ISO_IR 126","multi","€ 10"],"fn":"Encode","ok":"pCAxMA=="}
+{"args":["ISO_IR 127","multi","العربية"],"fn":"Encode","ok":"x+TZ0cjqyQ=="}
+{"args":["ISO_IR 138","multi","עברית"],"fn":"Encode","ok":"8uH46fo="}
+{"args":["ISO_IR 144","multi","Русский"],"fn":"Encode","ok":"wOPh4drY2Q=="}
+{"args":["ISO_IR 148","multi","Çağrı Şeker"],"fn":"Encode","ok":"x2Hwcv0g3mVrZXI="}
+{"args":["ISO_IR 166","multi","ไทย"],"fn":"Encode","ok":"5LfC"}
+{"args":["ISO_IR 192","multi","Yamada^Tarou=山田^太郎=やまだ^たろう"],"fn":"Encode","ok":"WWFtYWRhXlRhcm91PeWxseeUsF7lpKrpg44944KE44G+44GgXuOBn+OCjeOBhg=="}
+{"args":["ISO_IR 192","multi","Hong^Gildong=洪^吉洞=홍^길동"],"fn":"Encode","ok":"SG9uZ15HaWxkb25nPea0ql7lkInmtJ497ZmNXuq4uOuPmQ=="}
+{"args":["ISO_IR 192","multi","Wang^XiaoDong=王^小東="],"fn":"Encode","ok":"V2FuZ15YaWFvRG9uZz3njote5bCP5p2xPQ=="}
+{"args":["ISO_IR 192","multi","Zhang^SanFeng=张^三丰"],"fn":"Encode","ok":"WmhhbmdeU2FuRmVuZz3lvKBe5LiJ5Liw"}
+{"args":["ISO_IR 192","multi","Müller^Jürgen"],"fn":"Encode","ok":"TcO8bGxlcl5Kw7xyZ2Vu"}
+{"args":["ISO_IR 192","multi","Ελληνικά"],"fn":"Encode","ok":"zpXOu867zrfOvc65zrrOrA=="}
+{"args":["ISO_IR 192","multi","Русский"],"fn":"Encode","ok":"0KDRg9GB0YHQutC40Lk="}
+{"args":["ISO_IR 192","multi","עברית"],"fn":"Encode","ok":"16LXkdeo15nXqg=="}
+{"args":["ISO_IR 192","multi","العربية"],"fn":"Encode","ok":"2KfZhNi52LHYqNmK2Kk="}
+{"args":["ISO_IR 192","multi","ไทย"],"fn":"Encode","ok":"4LmE4LiX4Lii"}
+{"args":["ISO_IR 192","multi","Çağrı Şeker"],"fn":"Encode","ok":"w4dhxJ9yxLEgxZ5la2Vy"}
+{"args":["ISO_IR 192","multi","ｱｲｳｴｵ"],"fn":"Encode","ok":"772x772y772z77207721"}
+{"args":["ISO_IR 192","multi","¥‾"],"fn":"Encode","ok":"wqXigL4="}
+{"args":["ISO_IR 192","multi","€ 10"],"fn":"Encode","ok":"4oKsIDEw"}
+{"args":["ISO_IR 192","multi","😀"],"fn":"Encode","ok":"8J+YgA=="}
+{"args":["ISO_IR 192","multi","�"],"fn":"Encode","ok":"77+9"}
+{"args":["ISO_IR 192","multi","Łódź"],"fn":"Encode","ok":"xYHDs2TFug=="}
+{"args":["ISO_IR 192","multi","Čeština"],"fn":"Encode","ok":"xIxlxaF0aW5h"}
+{"args":["ISO_IR 192","multi","Ħal"],"fn":"Encode","ok":"xKZhbA=="}
+{"args":["ISO_IR 192","multi","Āda"],"fn":"Encode","ok":"xIBkYQ=="}
+{"args":["ISO_IR 192","multi","丂鷗"],"fn":"Encode","ok":"5LiC6beX"}
+{"args":["ISO_IR 192","multi","・―"],"fn":"Encode","ok":"44O74oCV"}
+{"args":["ISO_IR 192","multi","·—"],"fn":"Encode","ok":"wrfigJQ="}
+{"args":["ISO_IR 192","multi","ÿþ"],"fn":"Encode","ok":"w7/Dvg=="}
+{"args":["ISO_IR 192","multi","x"],"fn":"Encode","ok":"woV4"}
+{"args":["ISO_IR 192","multi","ｶﾀｶﾅ=カタカナ"],"fn":"Encode","ok":"7722776A7722776FPeOCq+OCv+OCq+ODig=="}
+{"args":["ISO_IR 192","multi","王=王=王"],"fn":"Encode","ok":"546LPeeOiz3njos="}
+{"args":["ISO_IR 192","multi","山田\\太郎"],"fn":"Encode","ok":"5bGx55SwXOWkqumDjg=="}
+{"args":["ISO_IR 192","multi","Ab=山\\Cd"],"fn":"Encode","ok":"QWI95bGxXENk"}
+{"args":["ISO_IR 13","multi","ｱｲｳｴｵ"],"fn":"Encode","ok":"sbKztLU="}
+{"args":["ISO_IR 13","single","¥‾"],"fn":"Encode","ok":"XH4="}
+{"args":["GB18030","multi","Yamada^Tarou=山田^太郎=やまだ^たろう"],"fn":"Encode","ok":"WWFtYWRhXlRhcm91Pcm9zO9ezKvAyT2k5KTepMBepL+k7aSm"}
+{"args":["GB18030","multi","Hong^Gildong=洪^吉洞=홍^길동"],"fn":"Encode","ok":"SG9uZ15HaWxkb25nPbrpXryqtrQ9gzacNF6COIozgjmcNA=="}
+{"args":["GB18030","multi","Wang^XiaoDong=王^小東="],"fn":"Encode","ok":"V2FuZ15YaWFvRG9uZz3N9V7QoZZ8PQ=="}
+{"args":["GB18030","multi","Zhang^SanFeng=张^三丰"],"fn":"Encode","ok":"WmhhbmdeU2FuRmVuZz3VxV7I/bfh"}
+{"args":["GB18030","multi","Müller^Jürgen"],"fn":"Encode","ok":"Tai5bGxlcl5KqLlyZ2Vu"}
+{"args":["GB18030","multi","Ελληνικά"],"fn":"Encode","ok":"pqWmy6bLpsemzabJpsqBMMs0"}
+{"args":["ünïcödé😀","a..b","ünïcödéHello World"],"error":"dicom: unsupported specific character set: \"ÜNÏCÖDÉ😀\"","fn":"Encode"}
+{"args":["src/a/b.ts","straße","﻿bom"],"error":"dicom: unsupported specific character set: \"SRC/A/B.TS\"","fn":"Encode"}
+{"args":["a.b.ckey_name-1","ΣΊΣΥΦΟΣ","trailing."],"error":"dicom: unsupported specific character set: \"A.B.CKEY NAME-1\"","fn":"Encode"}
+{"args":["abc","a..b","hello world"],"error":"dicom: unsupported specific character set: \"ABC\"","fn":"Encode"}
+{"args":["a😀b😀cHELLO","abünïcödé","HELLO"],"error":"dicom: unsupported specific character set: \"A😀B😀CHELLO\"","fn":"Encode"}
+{"args":["﻿bom","tab\tseparated","emoji 👍🏽 mix"],"error":"dicom: unsupported specific character set: \"\\ufeffBOM\"","fn":"Encode"}
+{"args":["he",".leading","hello world"],"error":"dicom: unsupported specific character set: \"HE\"","fn":"Encode"}
+{"args":["{name} has {count} items😀","abc","key_name-1"],"error":"dicom: unsupported specific character set: \"{NAME} HAS {COUNT} ITEMS😀\"","fn":"Encode"}
+{"args":["ab","ab","ab"],"error":"dicom: unsupported specific character set: \"AB\"","fn":"Encode"}
+{"args":["  padded  ","HELLO","a..b"],"error":"dicom: unsupported specific character set: \"PADDED\"","fn":"Encode"}
+{"args":["ünïcödéstraße","abc","tab\tseparated"],"error":"dicom: unsupported specific character set: \"ÜNÏCÖDÉSTRAßE\"","fn":"Encode"}
+{"args":["a","a","a😀b😀c"],"error":"dicom: unsupported specific character set: \"A\"","fn":"Encode"}
+{"args":["trailing.","hello","tab\tseparated"],"error":"dicom: unsupported specific character set: \"TRAILING.\"","fn":"Encode"}
+{"args":["hello world","a","  padded  "],"error":"dicom: unsupported specific character set: \"HELLO WORLD\"","fn":"Encode"}
+{"args":["hello","日本語のテキスト",".leadingstraße"],"error":"dicom: unsupported specific character set: \"HELLO\"","fn":"Encode"}
+{"args":["d","ns:key.path","Hello World"],"error":"dicom: unsupported specific character set: \"D\"","fn":"Encode"}
+{"args":["a..b","emoji 👍🏽 mix",":"],"error":"dicom: unsupported specific character set: \"A..B\"","fn":"Encode"}
+{"args":["/*.j","line1\nline2","./x/**/*.json"],"error":"dicom: unsupported specific character set: \"/*.J\"","fn":"Encode"}
+{"args":["./x/**/*.json","src/a/b.ts","emoji 👍🏽 mix"],"error":"dicom: unsupported specific character set: \"./X/**/*.JSON\"","fn":"Encode"}
+{"args":["😀","ns:key.path","😀"],"error":"dicom: unsupported specific character set: \"😀\"","fn":"Encode"}
+{"args":[""],"fn":"Names","ok":"ISO_IR 6"}
+{"args":["ISO_IR 100"],"fn":"Names","ok":"ISO_IR 100"}
+{"args":["ISO_IR 101"],"fn":"Names","ok":"ISO_IR 101"}
+{"args":["ISO_IR 109"],"fn":"Names","ok":"ISO_IR 109"}
+{"args":["ISO_IR 110"],"fn":"Names","ok":"ISO_IR 110"}
+{"args":["ISO_IR 126"],"fn":"Names","ok":"ISO_IR 126"}
+{"args":["ISO_IR 127"],"fn":"Names","ok":"ISO_IR 127"}
+{"args":["ISO_IR 138"],"fn":"Names","ok":"ISO_IR 138"}
+{"args":["ISO_IR 144"],"fn":"Names","ok":"ISO_IR 144"}
+{"args":["ISO_IR 148"],"fn":"Names","ok":"ISO_IR 148"}
+{"args":["ISO_IR 166"],"fn":"Names","ok":"ISO_IR 166"}
+{"args":["ISO_IR 192"],"fn":"Names","ok":"ISO_IR 192"}
+{"args":["ISO_IR 13"],"fn":"Names","ok":"ISO_IR 13"}
+{"args":["GB18030"],"fn":"Names","ok":"GB18030"}
+{"args":["GBK"],"fn":"Names","ok":"GBK"}
+{"args":["\\ISO 2022 IR 87"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 87"}
+{"args":["ISO 2022 IR 13\\ISO 2022 IR 87"],"fn":"Names","ok":"ISO 2022 IR 13\\ISO 2022 IR 87"}
+{"args":["\\ISO 2022 IR 149"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 149"}
+{"args":["\\ISO 2022 IR 58"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 58"}
+{"args":["ISO 2022 IR 6\\ISO 2022 IR 87\\ISO 2022 IR 159"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 87\\ISO 2022 IR 159"}
+{"args":["ISO 2022 IR 100\\ISO 2022 IR 126"],"fn":"Names","ok":"ISO_IR 100\\ISO 2022 IR 126"}
+{"args":["ISO 2022 IR 6\\ISO 2022 IR 13"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 13"}
+{"args":["ISO 2022 IR 148\\ISO 2022 IR 166"],"fn":"Names","ok":"ISO 2022 IR 148\\ISO 2022 IR 166"}
+{"args":["ISO 2022 IR 6\\ISO 2022 IR 100\\ISO 2022 IR 101"],"fn":"Names","ok":"ISO_IR 6\\ISO_IR 100\\ISO 2022 IR 101"}
+{"args":["ISO 2022 IR 144\\ISO 2022 IR 87\\ISO 2022 IR 149"],"fn":"Names","ok":"ISO 2022 IR 144\\ISO 2022 IR 87\\ISO 2022 IR 149"}
+{"args":["ISO 2022 IR 6\\ISO 2022 IR 127\\ISO 2022 IR 138"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 127\\ISO 2022 IR 138"}
+{"args":["ISO 2022 IR 13\\ISO 2022 IR 58"],"fn":"Names","ok":"ISO 2022 IR 13\\ISO 2022 IR 58"}
+{"args":["\\ISO 2022 IR 100"],"fn":"Names","ok":"ISO_IR 6\\ISO_IR 100"}
+{"args":["ISO_IR 6"],"fn":"Names","ok":"ISO_IR 6"}
+{"args":[" iso_ir  100 "],"fn":"Names","ok":"ISO_IR 100"}
+{"args":["ISO 2022 IR 6\\ISO 2022 IR 87"],"fn":"Names","ok":"ISO_IR 6\\ISO 2022 IR 87"}
+{"args":["﻿bom"],"error":"dicom: unsupported specific character set: \"\\ufeffBOM\"","fn":"Names"}
+{"args":["ns:key.path"],"error":"dicom: unsupported specific character set: \"NS:KEY.PATH\"","fn":"Names"}
+{"args":["{name} has {count} items"],"error":"dicom: unsupported specific character set: \"{NAME} HAS {COUNT} ITEMS\"","fn":"Names"}
+{"args":["src/a/b.ts"],"error":"dicom: unsupported specific character set: \"SRC/A/B.TS\"","fn":"Names"}
+{"args":["line1\nline2"],"error":"dicom: unsupported specific character set: \"LINE1 LINE2\"","fn":"Names"}
+{"args":["😀"],"error":"dicom: unsupported specific character set: \"😀\"","fn":"Names"}
+{"args":["é"],"error":"dicom: unsupported specific character set: \"É\"","fn":"Names"}
+{"args":["tab\tseparated"],"error":"dicom: unsupported specific character set: \"TAB SEPARATED\"","fn":"Names"}
+{"args":["a:b:c"],"error":"dicom: unsupported specific character set: \"A:B:C\"","fn":"Names"}
+{"args":["日本語のテキスト"],"error":"dicom: unsupported specific character set: \"日本語のテキスト\"","fn":"Names"}
+{"args":["a.b.cemoji 👍🏽 mix"],"error":"dicom: unsupported specific character set: \"A.B.CEMOJI 👍🏽 MIX\"","fn":"Names"}
+{"args":["ns:key.patha"],"error":"dicom: unsupported specific character set: \"NS:KEY.PATHA\"","fn":"Names"}
+{"args":["İstanbul"],"error":"dicom: unsupported specific character set: \"İSTANBUL\"","fn":"Names"}
+{"args":["HELLO"],"error":"dicom: unsupported specific character set: \"HELLO\"","fn":"Names"}
+{"args":["abc"],"error":"dicom: unsupported specific character set: \"ABC\"","fn":"Names"}
+{"args":[".leading😀"],"error":"dicom: unsupported specific character set: \".LEADING😀\"","fn":"Names"}
+{"args":["ünïcödé"],"error":"dicom: unsupported specific character set: \"ÜNÏCÖDÉ\"","fn":"Names"}
+{"args":["emoji 👍🏽 mix"],"error":"dicom: unsupported specific character set: \"EMOJI 👍🏽 MIX\"","fn":"Names"}
+{"args":["straße"],"error":"dicom: unsupported specific character set: \"STRAßE\"","fn":"Names"}
+{"args":["ΣΊΣΥΦΟΣ"],"error":"dicom: unsupported specific character set: \"ΣΊΣΥΦΟΣ\"","fn":"Names"}
+{"args":[[1]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�","replaced":true}}
+{"args":[[100]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"d","replaced":false}}
+{"args":[[]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"","replaced":false}}
+{"args":[[42]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"*","replaced":false}}
+{"args":[[2,255,42]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�*","replaced":true}}
+{"args":[[100,100,255]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"dd�","replaced":true}}
+{"args":[[0,97,98]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�ab","replaced":true}}
+{"args":[[27,36,40,67,34,102,27,40,66,32,49,48]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"� 10","replaced":true}}
+{"args":[[27,36,40,68,41,36,27,40,66,97,108]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�al","replaced":true}}
+{"args":[{"$hex":"1b24284429282b511b2842641b2428442b751b2842"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�d�","replaced":true}}
+{"args":[[27,36,40,68,42,39,27,40,66,100,97]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�da","replaced":true}}
+{"args":[{"$hex":"1b2428442a2d1b2842651b2428442b5e1b284274696e61"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�e�tina","replaced":true}}
+{"args":[{"$hex":"1b2428442a2e1b2842611b2428442b3b1b2842721b24284429451b2842201b2428442a5f1b2842656b6572"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�a�r� �eker","replaced":true}}
+{"args":[{"$hex":"1b244232261b28423d1b244232261b28423d1b244232261b2842"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�=�=�","replaced":true}}
+{"args":[{"$hex":"1b24423b331b28420d0a1b24423b331b2842"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�\r\n�","replaced":true}}
+{"args":[{"$hex":"1b24423b3345441b28425c1b244242404f3a1b2842"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�\\�","replaced":true}}
+{"args":[[27,40,74,92,126,27,40,66]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"\\~","replaced":false}}
+{"args":[[32,32,115,112,97,99,101,100,32,32]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"  spaced  ","replaced":false}}
+{"args":[[61,27,36,66,59,51,27,40,66,61]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"=�=","replaced":true}}
+{"args":[[65,98,61,27,36,66,59,51,27,40,66,92,67,100]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Ab=�\\Cd","replaced":true}}
+{"args":[[65,98,61,142,82,92,67,100]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Ab=�R\\Cd","replaced":true}}
+{"args":[[68,111,101,94,74,111,104,110]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Doe^John","replaced":false}}
+{"args":[{"$hex":"486f6e675e47696c646f6e673d1b242943fbf35e1b242943d1ced4d73d1b242943c8ab5e1b242943b1e6b5bf"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Hong^Gildong=�^�=�^�","replaced":true}}
+{"args":[{"$hex":"486f6e675e47696c646f6e673dbae95ebcaab6b43d83369c345e82388a3382399c34"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Hong^Gildong=�^�=�6�4^�8�3�9�4","replaced":true}}
+{"args":[{"$hex":"4d1b2428442b641b28426c6c65725e4a1b2428442b641b28427267656e"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"M�ller^J�rgen","replaced":true}}
+{"args":[{"$hex":"57616e675e5869616f446f6e673d1b244232261b28425e1b24423e2e456c1b28423d"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Wang^XiaoDong=�^�=","replaced":true}}
+{"args":[{"$hex":"57616e675e5869616f446f6e673dcdf55ed0a1967c3d"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Wang^XiaoDong=�^�|=","replaced":true}}
+{"args":[{"$hex":"59616d6164615e5461726f753d1b24423b3345441b28425e1b244242404f3a1b28423d1b24422464245e24401b28425e1b2442243f246d24261b2842"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Yamada^Tarou=�^�=�^�","replaced":true}}
+{"args":[{"$hex":"59616d6164615e5461726f753d8e5293635e91be98593d82e282dc82be5e82bd82eb82a4"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Yamada^Tarou=�R�c^�Y=�^�","replaced":true}}
+{"args":[{"$hex":"5a68616e675e53616e46656e673d1b24284155451b28425e1b24423b301b242844302d1b2842"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Zhang^SanFeng=�^�","replaced":true}}
+{"args":[{"$hex":"5a68616e675e53616e46656e673d1b242941d5c55e1b242941c8fdb7e13d1b242941d5c55e1b242941c8fdb7e1"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"Zhang^SanFeng=�^�=�^�","replaced":true}}
+{"args":[[94,27,36,66,59,51,27,40,66]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"^�","replaced":true}}
+{"args":[[94,61,92]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"^=\\","replaced":false}}
+{"args":[[97,92,98,92,99]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"a\\b\\c","replaced":false}}
+{"args":[[97,92,233,92,98]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"a\\�\\b","replaced":true}}
+{"args":[[97,98,27,40,74,99,92,27,40,66]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"abc\\","replaced":false}}
+{"args":[[97,98,99,27,45,65,233,27,40,66,122]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"abc�z","replaced":true}}
+{"args":[[116,97,98,9,104,101,114,101,13,10,108,105,110,101]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"tab\there\r\nline","replaced":false}}
+{"args":[[120,61,27,40,66]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"x=","replaced":false}}
+{"args":[[120,92,27,36,66,59,51,27,40,66,92,121]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"x\\�\\y","replaced":true}}
+{"args":[[129,48]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0","replaced":true}}
+{"args":[[129,48,129,48]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�0","replaced":true}}
+{"args":[[129,48,129,53,120]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�5x","replaced":true}}
+{"args":[[129,48,132,54,129,54,168,50]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�6�6�2","replaced":true}}
+{"args":[{"$hex":"813087356181308e3672813090332081309435656b6572"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�5a�0�6r�0�3 �0�5eker","replaced":true}}
+{"args":[[129,48,139,55,129,48,139,54]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�7�0�6","replaced":true}}
+{"args":[[129,48,139,56,100,97]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�8da","replaced":true}}
+{"args":[[129,48,140,57,101,129,48,148,56,116,105,110,97]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�9e�0�8tina","replaced":true}}
+{"args":[[129,48,143,51,97,108]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�3al","replaced":true}}
+{"args":[[129,48,145,57,168,174,100,129,48,151,50]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�9�d�0�2","replaced":true}}
+{"args":[{"$hex":"8130fb308130f9338130fb368130fa318130fb38"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�0�0�0�3�0�6�0�1�0�8","replaced":true}}
+{"args":[{"$hex":"81318339813186388131853781318439813184308131873481318431"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�1�9�1�8�1�7�1�9�1�0�1�4�1�1","replaced":true}}
+{"args":[[129,50,213,54,129,50,209,49,129,50,210,50]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�2�6�2�1�2�2","replaced":true}}
+{"args":[[129,57,167,57,168,68]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�9�9�D","replaced":true}}
+{"args":[[129,64,250,116]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�@�t","replaced":true}}
+{"args":[[129,69,129,92]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�E�\\","replaced":true}}
+{"args":[{"$hex":"8431973384319734843197358431973684319737"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�1�3�1�4�1�5�1�6�1�7","replaced":true}}
+{"args":[{"$hex":"843197388431983884319738843199333da5aba5bfa5aba5ca"}],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�1�8�1�8�1�8�1�3=�","replaced":true}}
+{"args":[[132,49,164,55]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�1�7","replaced":true}}
+{"args":[[132,81,132,133,132,131,132,131,132,123,132,121,132,122]],"fn":"ReadDefaultRepertoireReplacing","ok":{"text":"�Q�{�y�z","replaced":true}}
