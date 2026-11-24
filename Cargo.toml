@@ -68,6 +68,11 @@ memmap2 = "0.9"
 rustix = { version = "1", features = ["fs", "std", "system"] }
 [lib]
 bench = false
+[[bench]]
+name = "suite"
+path = "benches/suite/main.rs"
+harness = false
+required-features = ["codecs", "render"]
 [[test]]
 name = "codec_roundtrip"
 required-features = ["codecs"]
