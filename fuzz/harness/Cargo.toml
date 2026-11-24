@@ -1,0 +1,10 @@
+[package]
+name = "dicom-rust-fuzz-harness"
+version = "0.0.0"
+publish = false
+edition = "2024"
+description = "The fuzz targets of dicom-rust as plain functions (one per untrusted-input path), the seeds they start from, and `soak`: a pure-Rust mutation runner for machines where libFuzzer is not available."
+[dependencies]
+dicom-rust = { path = "../..", default-features = false, features = ["net", "dicomweb", "codecs"] }
+[target.'cfg(windows)'.dependencies]
+dicom-rust-fuzz-sancov-sections = { path = "../sancov-sections" }

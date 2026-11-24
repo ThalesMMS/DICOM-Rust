@@ -1,0 +1,5 @@
+### ASCCONV BEGIN ###
+sKSpace.lBaseResolution	 = 	256
+sSliceArray.asSlice[0].dThickness = 3.0
+sSliceArray.lSize = 2
+### ASCCONV END ###

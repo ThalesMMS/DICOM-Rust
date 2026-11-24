@@ -1,0 +1,1 @@
+{"00100010":{"vr":"PN","Value":[{"Alphabetic":"Doe^Jane"}]},"00081140":{"vr":"SQ","Value":[{"00081150":{"vr":"UI","Value":["1.2.3"]}}]},"00280010":{"vr":"US","Value":[4]},"00200032":{"vr":"DS","Value":[0,"1.5",-2e1]},"7FE00010":{"vr":"OB","InlineBinary":"AAECAw=="},"00420011":{"vr":"OB","BulkDataURI":"http://example.test/x"}}

@@ -1,0 +1,198 @@
+[package]
+name = "dicom-rust-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+description = "Fuzz targets: every path that reads untrusted bytes (file and data set readers, deferred and frame readers, transfer syntax probe, PDU parser, DICOMDIR, DICOM JSON and XML, DICOMweb responses, vendor headers, encapsulated Pixel Data planner, each codec) and the decode guard. Run with cargo-fuzz (nightly): cargo +nightly fuzz run <target>; or, without libFuzzer, with the pure-Rust runner: cargo run --release -p dicom-rust-fuzz-harness --bin soak -- --target all."
+[package.metadata]
+cargo-fuzz = true
+[workspace]
+members = [".", "harness", "sancov-sections"]
+[dependencies]
+libfuzzer-sys = "0.4"
+dicom-rust = { path = "..", default-features = false, features = ["net", "dicomweb", "codecs"] }
+dicom-rust-fuzz-harness = { path = "harness" }
+[[bin]]
+name = "jpeg_header"
+path = "fuzz_targets/jpeg_header.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "jpegls_header"
+path = "fuzz_targets/jpegls_header.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "j2k_siz"
+path = "fuzz_targets/j2k_siz.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "guard_attributes"
+path = "fuzz_targets/guard_attributes.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "file_reader"
+path = "fuzz_targets/file_reader.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dataset_implicit_le"
+path = "fuzz_targets/dataset_implicit_le.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dataset_explicit_le"
+path = "fuzz_targets/dataset_explicit_le.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dataset_explicit_be"
+path = "fuzz_targets/dataset_explicit_be.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dataset_deflated"
+path = "fuzz_targets/dataset_deflated.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dataset_encapsulated"
+path = "fuzz_targets/dataset_encapsulated.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "ul_pdu"
+path = "fuzz_targets/ul_pdu.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dimse_command"
+path = "fuzz_targets/dimse_command.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dicomdir"
+path = "fuzz_targets/dicomdir.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dicomjson"
+path = "fuzz_targets/dicomjson.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dicomxml"
+path = "fuzz_targets/dicomxml.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "pixel_native"
+path = "fuzz_targets/pixel_native.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_rle"
+path = "fuzz_targets/codec_rle.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_jpeg"
+path = "fuzz_targets/codec_jpeg.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_jpeg_lossless"
+path = "fuzz_targets/codec_jpeg_lossless.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_jpegls"
+path = "fuzz_targets/codec_jpegls.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_jpeg2000"
+path = "fuzz_targets/codec_jpeg2000.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_htj2k"
+path = "fuzz_targets/codec_htj2k.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "codec_jpegxl"
+path = "fuzz_targets/codec_jpegxl.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "file_deferred"
+path = "fuzz_targets/file_deferred.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "frame_reader"
+path = "fuzz_targets/frame_reader.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "probe"
+path = "fuzz_targets/probe.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "encapsulated_layout"
+path = "fuzz_targets/encapsulated_layout.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "vendor_headers"
+path = "fuzz_targets/vendor_headers.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "dicomweb_response"
+path = "fuzz_targets/dicomweb_response.rs"
+test = false
+doc = false
+bench = false
+[[bin]]
+name = "transcode"
+path = "fuzz_targets/transcode.rs"
+test = false
+doc = false
+bench = false
+[profile.release]
+overflow-checks = true
+debug-assertions = true
+debug = "line-tables-only"

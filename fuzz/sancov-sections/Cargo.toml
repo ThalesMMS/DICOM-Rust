@@ -1,0 +1,9 @@
+[package]
+name = "dicom-rust-fuzz-sancov-sections"
+version = "0.0.0"
+publish = false
+edition = "2024"
+description = "libFuzzer on Windows without a sanitizer: the bounds of the coverage sections, which a sanitizer runtime defines otherwise. Data only, so the coverage pass adds nothing to it."
+
+[lib]
+path = "src/lib.rs"
