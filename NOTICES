@@ -1,0 +1,1499 @@
+NOTICES
+
+Copyright 2026 Thales Matheus Mendonça Santos
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This file lists the material in this package that is derived from other works
+and reproduces the notices that their licences or terms of use require. The
+package's own licence is declared in the `license` field of Cargo.toml. This
+file is generated from third_party/manifest.json by
+third_party/gen_notices.py; edit the manifest, not this file.
+
+Contents
+   1. Go standard library and Go sub-repositories (translated algorithms) [BSD-3-Clause; notice required]
+   2. fdlibm / FreeBSD msun (logarithm, log1p, erf, cbrt) [fdlibm (permissive, notice must be preserved); notice required]
+   3. Cephes Math Library (sine, cosine, tangent) [Cephes (free use, no conditions); notice courtesy]
+   4. WHATWG Encoding Standard indexes (character-set tables) [BSD-3-Clause (WHATWG, for portions incorporated into source code) AND BSD-3-Clause (Go); notice required]
+   5. Unicode Character Database (letter, mark and normalization tables) [Unicode-3.0 AND BSD-3-Clause; notice required]
+   6. DCMTK dicom.dic (standard data dictionary tables) [BSD-3-Clause; notice required]
+   7. DCMTK private.dic and GDCM privatedicts.xml (selected private dictionary definitions) [BSD-3-Clause AND BSD-3-Clause AND dicom3tools BSD-style; notice required]
+   8. Insight Toolkit (N4 bias correction, histogram matching, grayscale reconstruction, morphological watershed) [Apache-2.0; notice required]
+   9. ITK, VTK and scikit-image (behaviour followed, test values reused; no code copied) [Apache-2.0; BSD-3-Clause; BSD-3-Clause; notice courtesy]
+  10. go-dicom JPEG 2000 Part 1 decoder [MIT; notice required]
+  11. HTJ2K CxtVLC codebook (ISO/IEC 15444-15) [Apache-2.0 AND BSD-2-Clause; notice required]
+  12. Brotli static dictionary and word transforms (RFC 7932) [MIT; notice required]
+  13. 3D Slicer volume rendering presets CT-Chest-Contrast-Enhanced, CT-Coronary-Arteries-3 and CT-Muscle [LicenseRef-3D-Slicer-1.0; notice required]
+  14. DICOM Standard content (PS3.3, PS3.4, PS3.6, PS3.14, PS3.15, PS3.16) [NEMA copyright; implementation needs no licence; notice courtesy]
+  15. SNOMED CT concepts published in DICOM PS3.16 (SNOMED CT - DICOM subset) [SNOMED CT - DICOM agreement (use in DICOM-conformant applications without further licence or fee); notice required]
+  16. LOINC codes published in DICOM PS3.16 [LOINC Copyright Notice and License (no fee); notice required]
+  17. UCUM unit codes published in DICOM PS3.16 [UCUM License 1.1 (no fee); notice required]
+  18. UMLS concept identifiers published in DICOM PS3.16 [UMLS Metathesaurus License (as published in DICOM PS3.16); notice courtesy]
+  19. Other coding schemes referenced by DICOM PS3.16 [various, as published in DICOM PS3.16; notice courtesy]
+  20. Published test vectors [facts / public domain (FIPS); notice none]
+  21. Normative tables of image and compression standards [standards (facts needed for interoperability); notice none]
+  22. Synthetic test data of the integration tests [same as the package; notice none]
+
+==============================================================================
+1. Go standard library and Go sub-repositories (translated algorithms)
+==============================================================================
+
+Source: The Go Programming Language (standard library 1.26; golang.org/x/text
+v0.21.0; golang.org/x/crypto cryptobyte)
+Location: https://go.dev/
+Revision: go1.26.4; x/text v0.21.0
+Licence: BSD-3-Clause
+Notice: required
+Files in this package:
+  src/deflater.rs
+  src/object/inflate.rs
+  src/nifti/gzip.rs
+  src/encapimage/png.rs
+  src/render/png_encode.rs
+  src/codec/jpeg/stdjpeg/
+  src/numtext.rs
+  src/numtext_pow10.rs
+  src/textfmt.rs
+  src/dicomjson/sizedparse.rs
+  src/fmath.rs
+  src/fmath/rand.rs
+  src/fmath/rand/tables.rs
+  src/dicomdir/pathrules.rs
+  src/dicomjson/jsonwire.rs
+  src/dicomjson/jsonwire/stream.rs
+  src/net/audit/jsonwire.rs
+  src/net/audit/timetext.rs
+  src/dicomxml/xmlwire.rs
+  src/encapdoc/urlrules.rs
+  src/net/dicomweb/urlrules.rs
+  src/tractography/urlrules.rs
+  src/net/dicomweb/mimeheader.rs
+  src/render/stablesort.rs
+  src/roi/pdqsort.rs
+  src/roi/pdqsort_by.rs
+  src/dsig/x509check.rs
+  src/charset/codec.rs
+  src/charset/japanese.rs
+  src/charset/lookup.rs
+  src/hl7/charset.rs
+
+Copyright 2009 The Go Authors.
+
+These files translate algorithms of the Go standard library and of
+golang.org/x/text and golang.org/x/crypto into Rust so that results are
+byte-identical: the DEFLATE encoder and decoder with zlib and gzip framing,
+the PNG reader and writer, the baseline/progressive JPEG decoder and baseline
+encoder, decimal and floating-point parsing and formatting (including the
+table of powers of ten), quoting of strings, mathematical functions, the
+seeded pseudo-random source and its tables, path cleaning, JSON and XML
+tokenizers and printers, URL and media-type parsing, RFC 3339 times, sorting,
+certificate DER checks and the multi-byte character-set decoders. Modified:
+translated to Rust, error values adapted.
+
+Licence and notice texts: [BSD-3-Clause.Go-Authors.txt]
+
+==============================================================================
+2. fdlibm / FreeBSD msun (logarithm, log1p, erf, cbrt)
+==============================================================================
+
+Source: fdlibm (Sun Microsystems), via FreeBSD /usr/src/lib/msun
+Location: https://www.netlib.org/fdlibm/
+Revision: e_log.c, s_log1p.c, s_erf.c, s_cbrt.c
+Licence: fdlibm (permissive, notice must be preserved)
+Notice: required
+Files in this package:
+  src/fmath.rs
+
+Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
+
+The logarithm, log1p, error function and cube root keep the method, constants
+and coefficients of fdlibm (developed at SunPro / SunSoft). The permission
+notice must be preserved.
+
+Licence and notice texts: [fdlibm.Sun-Microsystems.txt]
+
+==============================================================================
+3. Cephes Math Library (sine, cosine, tangent)
+==============================================================================
+
+Source: Cephes Math Library 2.8, Stephen L. Moshier
+Location: https://www.netlib.org/cephes/
+Revision: cmath/sin.c
+Licence: Cephes (free use, no conditions)
+Notice: courtesy
+Files in this package:
+  src/fmath.rs
+
+Copyright 1984, 1987, 1989, 1992, 2000 by Stephen L. Moshier
+
+The sine, cosine and tangent use the Cephes argument reduction and polynomial
+coefficients. The Cephes distribution states that the software may be used
+freely; attribution is kept as a courtesy.
+
+==============================================================================
+4. WHATWG Encoding Standard indexes (character-set tables)
+==============================================================================
+
+Source: WHATWG Encoding Standard index files (as tabulated by
+golang.org/x/text v0.21.0)
+Location: https://encoding.spec.whatwg.org/
+Revision: index-jis0208, index-jis0212, index-euc-kr, index-gb18030,
+index-gbk, index-big5, index-iso-8859-*, index-windows-874
+Licence: BSD-3-Clause (WHATWG, for portions incorporated into source code) AND
+BSD-3-Clause (Go)
+Notice: required
+Files in this package:
+  src/charset/tables.rs
+  src/hl7/tables.rs
+  src/hl7/tables.bin
+
+Copyright (c) WHATWG (Apple, Google, Mozilla, Microsoft).
+Copyright 2009 The Go Authors (tabulation).
+
+The ISO 8859, TIS-620, JIS X 0208/0212, KS X 1001, GB 2312/GBK/GB 18030 and
+Big5 mapping tables are the WHATWG Encoding Standard indexes in the tabulation
+of golang.org/x/text.
+
+Licence and notice texts: [BSD-3-Clause.WHATWG.txt], [BSD-3-Clause.Go-Authors.txt]
+
+==============================================================================
+5. Unicode Character Database (letter, mark and normalization tables)
+==============================================================================
+
+Source: Unicode Character Database (as tabulated by the Go unicode package and
+golang.org/x/text/unicode/norm)
+Location: https://www.unicode.org/ucd/
+Revision: Unicode 15.0 as shipped with go1.26.4
+Licence: Unicode-3.0 AND BSD-3-Clause
+Notice: required
+Files in this package:
+  src/personname/fuzzy/tables.rs
+  src/qrmatch/tables.rs
+
+Copyright (c) 1991-2026 Unicode, Inc.
+
+Ranges of letters and non-spacing marks and the decomposition data used for
+fuzzy person-name and text matching are derived from the Unicode Character
+Database. The Unicode licence asks that its notice appear with the data or in
+the documentation.
+
+Licence and notice texts: [Unicode-3.0.txt], [BSD-3-Clause.Go-Authors.txt]
+
+==============================================================================
+6. DCMTK dicom.dic (standard data dictionary tables)
+==============================================================================
+
+Source: DCMTK dcmdata/data/dicom.dic (generated by OFFIS from DICOM
+PS3.6-2026d and PS3.7-2026d)
+Location: https://github.com/DCMTK/dcmtk
+Revision: 8d68392db66cd69e13dc878dc9889681062ad479
+Licence: BSD-3-Clause
+Notice: required
+Files in this package:
+  src/object/dict_names.rs
+  src/object/dict_tables.rs
+  src/object/dict_retired.rs
+  src/object/dict_vm.rs
+  src/qrmatch/tables.rs
+
+Copyright (C) 1994-2026, OFFIS e.V.
+
+The tag, keyword, name, VR, VM and retired tables were generated from DCMTK's
+dicom.dic. The definitions are those of the DICOM Standard; the compiled file
+is OFFIS work and its notice is reproduced. No OFFIS endorsement is implied.
+
+Licence and notice texts: [BSD-3-Clause.DCMTK.txt]
+
+==============================================================================
+7. DCMTK private.dic and GDCM privatedicts.xml (selected private dictionary definitions)
+==============================================================================
+
+Source: DCMTK dcmdata/data/private.dic; GDCM
+Source/DataDictionary/privatedicts.xml (partly converted from dicom3tools)
+Location: https://github.com/DCMTK/dcmtk ; https://github.com/malaterre/GDCM
+Revision: DCMTK ac002900cab167509881e5b837cdef5dcb07cd37 (3.6.9); GDCM
+2cd05d13222b175e791b5ae3c08feeabcc1ed1f0
+Licence: BSD-3-Clause AND BSD-3-Clause AND dicom3tools BSD-style
+Notice: required
+Files in this package:
+  src/dictionary/curated_tables.rs
+  src/dictionary/curated.rs
+
+Copyright (C) 1994-2020, OFFIS e.V.
+Copyright (c) 2006-2016 Mathieu Malaterre; Copyright (c) 1993-2005 CREATIS
+Copyright (c) 1993-2006, David A. Clunie DBA PixelMed Publishing
+
+246 private definitions from DCMTK and 48 from GDCM, each record carrying its
+source line, commit, hash and licence; the full notices are also returned at
+run time by dictionary::curated::license_notice(). No endorsement by OFFIS,
+the GDCM authors, CREATIS or PixelMed Publishing is implied.
+
+Licence and notice texts: [BSD-3-Clause.DCMTK.txt], [BSD-3-Clause.GDCM.txt], [BSD.dicom3tools.txt]
+
+==============================================================================
+8. Insight Toolkit (N4 bias correction, histogram matching, grayscale reconstruction, morphological watershed)
+==============================================================================
+
+Source: ITK (Insight Toolkit)
+Location: https://github.com/InsightSoftwareConsortium/ITK
+Revision: 35b196e13c366e0386389a71c936a0436c568cea
+Licence: Apache-2.0
+Notice: required
+Files in this package:
+  src/imagefilter/n4.rs
+  src/imagefilter/histogram_matching.rs
+  src/roi/grayscale_reconstruction.rs
+  src/roi/watershed.rs
+
+Copyright 1999-2019 Insight Software Consortium
+Copyright 2020-present NumFOCUS
+
+Modified translations of itkN4BiasFieldCorrectionImageFilter,
+itkBSplineScatteredDataPointSetToImageFilter,
+itkBSplineControlPointImageFilter, itkHistogramMatchingImageFilter and
+Histogram::Quantile, itkReconstructionImageFilter, the regional-extrema,
+h-extrema and fill-hole filters and
+itkMorphologicalWatershedFromMarkersImageFilter. Changes: rewritten over dense
+float volumes with explicit neighbour offsets, budgets, cancellation,
+block-averaged estimation and the input checks listed in each file. Apache-2.0
+section 4 requires the licence, ITK's NOTICE and a statement of changes in
+each modified file.
+
+Licence and notice texts: [Apache-2.0.txt], [ITK-NOTICE.txt]
+
+==============================================================================
+9. ITK, VTK and scikit-image (behaviour followed, test values reused; no code copied)
+==============================================================================
+
+Source: ITK 35b196e1 / 519a94d954; VTK 9.6.2; scikit-image 0.26.0
+Location: https://github.com/InsightSoftwareConsortium/ITK ;
+https://github.com/Kitware/VTK ; https://github.com/scikit-image/scikit-image
+Revision: see project
+Licence: Apache-2.0; BSD-3-Clause; BSD-3-Clause
+Notice: courtesy
+Files in this package:
+  src/registration/
+  src/optimize/
+  src/dsa/
+  src/spatialreg/
+  src/roi/line_profile.rs
+  src/roi/livewire.rs
+  src/roi/autothreshold/
+
+Copyright NumFOCUS (ITK)
+Copyright (c) 1993-2015 Ken Martin, Will Schroeder, Bill Lorensen (VTK)
+Copyright the scikit-image team
+
+Registration metrics, optimizers, transform file formats, displacement-field
+inversion, Bresenham lines, livewire paths and automatic thresholds follow the
+documented behaviour and conventions of these projects and reuse the expected
+values of some of their tests. The code is written from the definitions and
+formats; no source was copied, so no licence notice is required.
+
+==============================================================================
+10. go-dicom JPEG 2000 Part 1 decoder
+==============================================================================
+
+Source: amrshadid/go-dicom compress/jpeg2000
+Location: https://github.com/amrshadid/go-dicom
+Revision: daecea14be3fbc27300aff20912ed7c8c8a0d599 (v1.6.0)
+Licence: MIT
+Notice: required
+Files in this package:
+  src/codec/jpeg2000/j2kcore/
+
+Copyright (c) 2024 go-dicom contributors
+
+The codestream parser, packet decoder, tag trees, MQ decoder, tier-1 decoder
+and inverse wavelet transforms are a modified translation of this decoder.
+Added later from ISO/IEC 15444-1 and 15444-15: every progression order and
+POC, precincts, code-block styles, PPM/PPT, subsampling, reduction, quality
+layers, regions, RGN, HT code-blocks and resource limits.
+
+Licence and notice texts: [MIT.go-dicom-contributors.txt]
+
+==============================================================================
+11. HTJ2K CxtVLC codebook (ISO/IEC 15444-15)
+==============================================================================
+
+Source: go-jpeg2000 internal/entropy/ht_luts.go, itself from OpenJPEG ht_dec.c
+/ t1_ht_luts.h
+Location: https://github.com/mrjoshuak/go-jpeg2000 ;
+https://github.com/uclouvain/openjpeg
+Revision: go-jpeg2000 8f771261d4f6c05dbbb0bdba9c70af57aca62d95 (v1.3.0)
+Licence: Apache-2.0 AND BSD-2-Clause
+Notice: required
+Files in this package:
+  src/codec/jpeg2000/htj2k/vlc_codebook.rs
+
+Copyright 2024 Joshua Kolden
+Copyright (c) 2021, Aous Naman; Kakadu Software Pty Ltd; The University of New
+South Wales
+
+The codewords of the normative CxtVLC tables were obtained by inverting the
+decoder lookup tables of go-jpeg2000, which derive from OpenJPEG. Only the
+codeword data was used; the encoder and decoder are independent.
+
+Licence and notice texts: [Apache-2.0.txt], [Apache-2.0.go-jpeg2000-notice.txt], [BSD-2-Clause.OpenJPEG-HT.txt]
+
+==============================================================================
+12. Brotli static dictionary and word transforms (RFC 7932)
+==============================================================================
+
+Source: Brotli reference implementation c/common/dictionary.c; RFC 7932
+Appendix A and B
+Location: https://github.com/google/brotli
+Revision: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d (v1.1.0)
+Licence: MIT
+Notice: required
+Files in this package:
+  src/codec/jpegxl/brotli_dictionary.bin
+  src/codec/jpegxl/brotli_tables.rs
+  src/codec/jpegxl/LICENSE.brotli
+
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
+
+The 122784-byte static dictionary (SHA-256 as stated in RFC 7932) and the 121
+word transforms. The decoder is written from RFC 7932.
+
+Licence and notice texts: [LICENSE.brotli]
+
+==============================================================================
+13. 3D Slicer volume rendering presets CT-Chest-Contrast-Enhanced, CT-Coronary-Arteries-3 and CT-Muscle
+==============================================================================
+
+Source: 3D Slicer Modules/Loadable/VolumeRendering/Resources/presets.xml,
+presets CT-Chest-Contrast-Enhanced, CT-Coronary-Arteries-3, CT-Muscle
+Location: https://github.com/Slicer/Slicer
+Revision: 74c135801f704ade9660d894a928d8b4b93d7a28
+Licence: LicenseRef-3D-Slicer-1.0
+Notice: required
+Files in this package:
+  src/render/vr_transfer.rs
+
+All or portions of this licensed product (such portions are the "Software")
+have been obtained under license from The Brigham and Women's Hospital, Inc.
+and are subject to the following terms and conditions: the 3D Slicer
+Contribution and Software License Agreement, version 1.0, reproduced in full
+in [Slicer-License-1.0.txt] (Part B is the licence under which this data is
+used).
+
+The colour and opacity points and the lighting coefficients of three presets,
+as SLICER_CT_CHEST_CONTRAST_ENHANCED, SLICER_CT_CORONARY_ARTERIES_3 and
+SLICER_CT_MUSCLE (SlicerVrPreset) in src/render/vr_transfer.rs;
+VrTransferFunction::new_ct_muscle uses the CT-Muscle colours. This is a
+modified version of the Software: in each preset the points below the last
+fully transparent opacity point are dropped and the positions are rewritten
+over 0..1 of the remaining Hounsfield range (window_hu); colours, opacities
+and coefficients are unchanged. Part B of the licence requires its terms,
+prefaced by the sentence above, in every source and executable form and in
+user documentation, and states that the Software was designed for research
+purposes only, has not been reviewed or approved by the FDA or any other
+agency, and that clinical applications are neither recommended nor advised.
+
+Licence and notice texts: [Slicer-License-1.0.txt]
+
+==============================================================================
+14. DICOM Standard content (PS3.3, PS3.4, PS3.6, PS3.14, PS3.15, PS3.16)
+==============================================================================
+
+Source: DICOM Standard, NEMA (DocBook part03, part04, part06, part15, part16)
+Location: https://www.dicomstandard.org/current
+Revision: 2026d (PS3.15 2026b)
+Licence: NEMA copyright; implementation needs no licence
+Notice: courtesy
+Files in this package:
+  src/dictionary/uid_tables.rs
+  src/validation/iod/tables.rs
+  src/sr/template_catalog_tables.rs
+  src/codes/
+  src/deid/tables.rs
+  src/object/transfer_tables.rs
+  src/multiframe/bodyparts.rs
+  src/display/gsdf.rs
+
+Copyright NEMA. DICOM is the registered trademark of the National Electrical
+Manufacturers Association for its Standards publications relating to digital
+communications of medical information.
+
+UID registry, IOD module tables, SR templates, Context Groups and the DICOM
+Controlled Terminology, de-identification profiles, transfer syntaxes,
+body-part mappings and the Grayscale Standard Display Function constants are
+taken from the DICOM Standard. No licence or fee is required to implement the
+Standard; attribution and the trademark statement are recommended.
+
+==============================================================================
+15. SNOMED CT concepts published in DICOM PS3.16 (SNOMED CT - DICOM subset)
+==============================================================================
+
+Source: SNOMED CT International Edition as incorporated in DICOM PS3.16 2026d
+Location: https://www.snomed.org/ ;
+https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_2.html
+Revision: PS3.16 2026d (SNOMED CT International Edition 2021-07-31 as cited
+there)
+Licence: SNOMED CT - DICOM agreement (use in DICOM-conformant applications
+without further licence or fee)
+Notice: required
+Files in this package:
+  src/codes/sct.rs
+  src/codes/tables.rs
+  src/sr/template_catalog_tables.rs
+  src/multiframe/bodyparts.rs
+  src/deid/tables.rs
+  src/parametricmap/write.rs
+  src/sr/image_library_extract.rs
+  src/sr/measurement_context_read.rs
+
+SNOMED CT is copyright International Health Terminology Standards Development
+Organisation (SNOMED International). SNOMED CT was originally created by the
+College of American Pathologists. 'SNOMED' and 'SNOMED CT' are registered
+trademarks of SNOMED International.
+
+8059 SNOMED CT concepts (codes and the Code Meanings PS3.16 gives them), all
+from PS3.16, used by permission of SNOMED International under the agreement
+between NEMA and SNOMED International. Use beyond the terms published in the
+DICOM Standard, or of concepts outside the DICOM subset, is subject to SNOMED
+CT licensing. Veterinary concepts from the VetSCT extension are included in
+PS3.16 by permission of the Veterinary Terminology Services Laboratory.
+
+==============================================================================
+16. LOINC codes published in DICOM PS3.16
+==============================================================================
+
+Source: LOINC (Logical Observation Identifiers Names and Codes) as referenced
+by DICOM PS3.16 2026d
+Location: https://loinc.org/license/
+Revision: PS3.16 2026d
+Licence: LOINC Copyright Notice and License (no fee)
+Notice: required
+Files in this package:
+  src/codes/ln.rs
+  src/codes/tables.rs
+  src/sr/template_catalog_tables.rs
+  src/sr/image_library_structured.rs
+  src/ultrasound.rs
+  src/deid/tables.rs
+
+LOINC is copyright Regenstrief Institute, Inc. and the Logical Observation
+Identifiers Names and Codes (LOINC) Committee. LOINC is a registered United
+States trademark of Regenstrief Institute, Inc.
+
+893 LOINC codes with the Code Meanings PS3.16 gives them. The LOINC licence
+permits incorporation into software without fee, provided the product carries
+LOINC's short notice, the code content is not changed and each code is shown
+with one of LOINC's display names.
+
+Licence and notice texts: [LOINC-notice.txt]
+
+==============================================================================
+17. UCUM unit codes published in DICOM PS3.16
+==============================================================================
+
+Source: Unified Code for Units of Measure
+Location: https://ucum.org/license
+Revision: UCUM License 1.1 (June 2024)
+Licence: UCUM License 1.1 (no fee)
+Notice: required
+Files in this package:
+  src/codes/ucum.rs
+  src/codes/tables.rs
+
+Copyright (c) 1999-2024 Regenstrief Institute, Inc. All rights reserved.
+
+205 UCUM unit codes as DICOM PS3.16 uses them. The UCUM licence asks for a
+copyright notice, a reference to the licence and to its warranty disclaimer.
+
+Licence and notice texts: [UCUM-notice.txt]
+
+==============================================================================
+18. UMLS concept identifiers published in DICOM PS3.16
+==============================================================================
+
+Source: UMLS Metathesaurus concept unique identifiers (CUIs), National Library
+of Medicine
+Location:
+https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement.html
+Revision: PS3.16 2026d
+Licence: UMLS Metathesaurus License (as published in DICOM PS3.16)
+Notice: courtesy
+Files in this package:
+  src/codes/umls.rs
+  src/codes/tables.rs
+  src/sr/template_catalog_tables.rs
+  src/multiframe/bodyparts.rs
+  src/sr/measurement_context_read.rs
+  src/deid/tables.rs
+
+UMLS is a registered trademark of the National Library of Medicine.
+
+60 UMLS CUIs with the Code Meanings PS3.16 gives them, taken from the DICOM
+Standard, not from a Metathesaurus release.
+
+==============================================================================
+19. Other coding schemes referenced by DICOM PS3.16
+==============================================================================
+
+Source: ISO/IEEE 11073-10101 (MDC, 1330 codes), IBSI (147), RadLex (83), FMA
+(45), NCDR (39), MeSH (11), NEU (11), BARI (8), UNS (8), BI-RADS (4), ITIS
+(3), NDC (2), RxNorm (1), PubChem (1), ICD-10 (1), CSD (1)
+Location:
+https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_2.html
+Revision: PS3.16 2026d
+Licence: various, as published in DICOM PS3.16
+Notice: courtesy
+Files in this package:
+  src/codes/tables.rs
+  src/sr/template_catalog_tables.rs
+
+ISO/IEEE 11073 nomenclature: copyright IEEE, reprinted in DICOM by permission.
+BI-RADS: copyright American College of Radiology, licensed to DICOM. RadLex:
+copyright RSNA. FMA: University of Washington. ICD-10: copyright World Health
+Organization.
+
+Codes and Code Meanings of these schemes appear only as DICOM PS3.16 publishes
+them in its Context Groups and templates.
+
+==============================================================================
+20. Published test vectors
+==============================================================================
+
+Source: FIPS 180 (SHA-1), the RIPEMD-160 authors' test values, RFC 4231 test
+case 2 (HMAC), RFC 6455 section 1.3 example
+Location: https://csrc.nist.gov/ ; https://www.rfc-editor.org/
+Revision: -
+Licence: facts / public domain (FIPS)
+Notice: none
+Files in this package:
+  src/dsig/hash.rs
+  src/deid/uid.rs
+  src/net/dicomweb/websocket.rs
+
+Short known-answer values in unit tests; no notice is required.
+
+==============================================================================
+21. Normative tables of image and compression standards
+==============================================================================
+
+Source: ITU-T T.81 (JPEG), T.87 (JPEG-LS), ISO/IEC 15444-1/-2/-15 (JPEG 2000,
+HTJ2K), ISO/IEC 18181-1/-2 (JPEG XL), RFC 1950/1951 (zlib/DEFLATE), ICC.1
+(profiles), Adobe RGB (1998) colorimetry
+Location: -
+Revision: -
+Licence: standards (facts needed for interoperability)
+Notice: none
+Files in this package:
+  src/codec/
+  src/icc/
+  src/transfer/
+
+Huffman, quantization, context and transform constants defined by these
+standards, written from the standards. 'Adobe RGB (1998)' is a trademark of
+Adobe; the profile written by icc::build is described as compatible with it.
+
+==============================================================================
+22. Synthetic test data of the integration tests
+==============================================================================
+
+Source: Made for this package: reference cases (synthetic data sets, frames,
+codestreams, keys and texts, with the results a reference implementation of
+the same behaviour gave) and a throw-away test PKI generated with openssl
+(O=Example Test)
+Location: -
+Revision: -
+Licence: same as the package
+Notice: none
+Files in this package:
+  tests/reference_cases/
+  tests/data/pki/
+
+No patient data: names, identifiers and pixels are made up. The private keys
+under tests/data/pki/ are test material and protect nothing.
+
+==============================================================================
+Licence and notice texts
+==============================================================================
+
+------------------------------------------------------------------------------
+[BSD-3-Clause.Go-Authors.txt]  (third_party/licenses/BSD-3-Clause.Go-Authors.txt)
+------------------------------------------------------------------------------
+
+Copyright 2009 The Go Authors.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google LLC nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+------------------------------------------------------------------------------
+[fdlibm.Sun-Microsystems.txt]  (third_party/licenses/fdlibm.Sun-Microsystems.txt)
+------------------------------------------------------------------------------
+
+Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
+
+Developed at SunPro, a Sun Microsystems, Inc. business.
+Permission to use, copy, modify, and distribute this
+software is freely granted, provided that this notice
+is preserved.
+====================================================
+
+------------------------------------------------------------------------------
+[BSD-3-Clause.WHATWG.txt]  (third_party/licenses/BSD-3-Clause.WHATWG.txt)
+------------------------------------------------------------------------------
+
+Copyright (c) WHATWG (Apple, Google, Mozilla, Microsoft).
+
+The Encoding Standard is licensed under the Creative Commons Attribution 4.0
+International License; to the extent portions of it are incorporated into
+source code, such portions are licensed under the BSD 3-Clause License:
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+------------------------------------------------------------------------------
+[Unicode-3.0.txt]  (third_party/licenses/Unicode-3.0.txt)
+------------------------------------------------------------------------------
+
+UNICODE LICENSE V3
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright © 1991-2023 Unicode, Inc.
+
+NOTICE TO USER: Carefully read the following legal agreement. BY
+DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of data files and any associated documentation (the "Data Files") or
+software and any associated documentation (the "Software") to deal in the
+Data Files or Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, and/or sell
+copies of the Data Files or Software, and to permit persons to whom the
+Data Files or Software are furnished to do so, provided that either (a)
+this copyright and permission notice appear with all copies of the Data
+Files or Software, or (b) this copyright and permission notice appear in
+associated Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+THIRD PARTY RIGHTS.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall
+not be used in advertising or otherwise to promote the sale, use or other
+dealings in these Data Files or Software without prior written
+authorization of the copyright holder.
+
+------------------------------------------------------------------------------
+[BSD-3-Clause.DCMTK.txt]  (third_party/licenses/BSD-3-Clause.DCMTK.txt)
+------------------------------------------------------------------------------
+
+
+COPYRIGHT
+
+Unless otherwise specified, the DCMTK software package has the following
+copyright:
+
+/*
+ *  Copyright (C) 1994-2026, OFFIS e.V.
+ *  All rights reserved.
+ *
+ *  This software and supporting documentation were developed by
+ *
+ *    OFFIS e.V.
+ *    R&D Division Health
+ *    Escherweg 2
+ *    26121 Oldenburg, Germany
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *  - Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *  - Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ *  - Neither the name of OFFIS nor the names of its contributors may be
+ *    used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+Please note that some DCMTK modules, especially those that are not part
+of the free toolkit, are covered by a separate license which can be found
+in the COPYRIGHT file in the corresponding module directory.
+
+------------------------------------------------------------------------------
+[BSD-3-Clause.GDCM.txt]  (third_party/licenses/BSD-3-Clause.GDCM.txt)
+------------------------------------------------------------------------------
+
+/*=========================================================================
+
+  Program: GDCM (Grassroots DICOM). A DICOM library
+
+Copyright (c) 2006-2016 Mathieu Malaterre
+Copyright (c) 1993-2005 CREATIS
+(CREATIS = Centre de Recherche et d'Applications en Traitement de l'Image)
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+ * Neither name of Mathieu Malaterre, or CREATIS, nor the names of any
+   contributors (CNRS, INSERM, UCB, Universite Lyon I), may be used to
+   endorse or promote products derived from this software without specific
+   prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS''
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+=========================================================================*/
+
+------------------------------------------------------------------------------
+[BSD.dicom3tools.txt]  (third_party/licenses/BSD.dicom3tools.txt)
+------------------------------------------------------------------------------
+
+Copyright (c) 1993-2006, David A. Clunie DBA PixelMed Publishing. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of
+   conditions and the following disclaimers.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of
+   conditions and the following disclaimers in the documentation and/or other materials
+   provided with the distribution.
+
+3. Neither the name of PixelMed Publishing nor the names of its contributors may
+   be used to endorse or promote products derived from this software.
+
+This software is provided by the copyright holders and contributors "as is" and any
+express or implied warranties, including, but not limited to, the implied warranties
+of merchantability and fitness for a particular purpose are disclaimed. In no event
+shall the copyright owner or contributors be liable for any direct, indirect, incidental,
+special, exemplary, or consequential damages (including, but not limited to, procurement
+of substitute goods or services; loss of use, data or profits; or business interruption)
+however caused and on any theory of liability, whether in contract, strict liability, or
+tort (including negligence or otherwise) arising in any way out of the use of this software,
+even if advised of the possibility of such damage.
+
+This software has neither been tested nor approved for clinical use or for incorporation in
+a medical device. It is the redistributor's or user's responsibility to comply with any
+applicable local, state, national or international regulations.
+
+------------------------------------------------------------------------------
+[Apache-2.0.txt]  (third_party/licenses/Apache-2.0.txt)
+------------------------------------------------------------------------------
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+------------------------------------------------------------------------------
+[ITK-NOTICE.txt]  (third_party/licenses/ITK-NOTICE.txt)
+------------------------------------------------------------------------------
+
+NOTICE (ITK)
+----------------------------------------------------------------------
+
+ITK Software Licenses
+=====================
+
+The copyright of the Insight Toolkit (ITK) is held by:
+
+> Copyright 1999-2019    Insight Software Consortium
+>
+> Copyright 2020-present NumFOCUS
+
+This software is distributed under the Apache 2.0 License.
+
+See [LICENSE](../../LICENSE) file for details.
+
+Vendored third party software are copyrighted with licenses compatible with the Apache 2.0 License.
+For details, see the [licenses.md file](Documentation/docs/licenses.md).
+
+------------------------------------------------------------------------------
+[MIT.go-dicom-contributors.txt]  (third_party/licenses/MIT.go-dicom-contributors.txt)
+------------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2024 go-dicom contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+------------------------------------------------------------------------------
+[Apache-2.0.go-jpeg2000-notice.txt]  (third_party/licenses/Apache-2.0.go-jpeg2000-notice.txt)
+------------------------------------------------------------------------------
+
+Copyright 2024 Joshua Kolden
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+------------------------------------------------------------------------------
+[BSD-2-Clause.OpenJPEG-HT.txt]  (third_party/licenses/BSD-2-Clause.OpenJPEG-HT.txt)
+------------------------------------------------------------------------------
+
+Copyright (c) 2021, Aous Naman
+Copyright (c) 2021, Kakadu Software Pty Ltd, Australia
+Copyright (c) 2021, The University of New South Wales, Australia
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+------------------------------------------------------------------------------
+[LICENSE.brotli]  (src/codec/jpegxl/LICENSE.brotli)
+------------------------------------------------------------------------------
+
+Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+------------------------------------------------------------------------------
+[Slicer-License-1.0.txt]  (third_party/licenses/Slicer-License-1.0.txt)
+------------------------------------------------------------------------------
+
+
+For more information, please see:
+
+                      https://www.slicer.org
+
+The 3D Slicer license below is a BSD style license, with extensions
+to cover contributions and other issues specific to 3D Slicer.
+
+
+3D Slicer Contribution and Software License Agreement ("Agreement")
+Version 1.0 (December 20, 2005)
+
+This Agreement covers contributions to and downloads from the 3D
+Slicer project ("Slicer") maintained by The Brigham and Women's
+Hospital, Inc. ("Brigham"). Part A of this Agreement applies to
+contributions of software and/or data to Slicer (including making
+revisions of or additions to code and/or data already in Slicer). Part
+B of this Agreement applies to downloads of software and/or data from
+Slicer. Part C of this Agreement applies to all transactions with
+Slicer. If you distribute Software (as defined below) downloaded from
+Slicer, all of the paragraphs of Part B of this Agreement must be
+included with and apply to such Software.
+
+Your contribution of software and/or data to Slicer (including prior
+to the date of the first publication of this Agreement, each a
+"Contribution") and/or downloading, copying, modifying, displaying,
+distributing or use of any software and/or data from Slicer
+(collectively, the "Software") constitutes acceptance of all of the
+terms and conditions of this Agreement. If you do not agree to such
+terms and conditions, you have no right to contribute your
+Contribution, or to download, copy, modify, display, distribute or use
+the Software.
+
+PART A. CONTRIBUTION AGREEMENT - License to Brigham with Right to
+Sublicense ("Contribution Agreement").
+
+1. As used in this Contribution Agreement, "you" means the individual
+   contributing the Contribution to Slicer and the institution or
+   entity which employs or is otherwise affiliated with such
+   individual in connection with such Contribution.
+
+2. This Contribution Agreement applies to all Contributions made to
+   Slicer, including without limitation Contributions made prior to
+   the date of first publication of this Agreement. If at any time you
+   make a Contribution to Slicer, you represent that (i) you are
+   legally authorized and entitled to make such Contribution and to
+   grant all licenses granted in this Contribution Agreement with
+   respect to such Contribution; (ii) if your Contribution includes
+   any patient data, all such data is de-identified in accordance with
+   U.S. confidentiality and security laws and requirements, including
+   but not limited to the Health Insurance Portability and
+   Accountability Act (HIPAA) and its regulations, and your disclosure
+   of such data for the purposes contemplated by this Agreement is
+   properly authorized and in compliance with all applicable laws and
+   regulations; and (iii) you have preserved in the Contribution all
+   applicable attributions, copyright notices and licenses for any
+   third party software or data included in the Contribution.
+
+3. Except for the licenses granted in this Agreement, you reserve all
+   right, title and interest in your Contribution.
+
+4. You hereby grant to Brigham, with the right to sublicense, a
+   perpetual, worldwide, non-exclusive, no charge, royalty-free,
+   irrevocable license to use, reproduce, make derivative works of,
+   display and distribute the Contribution. If your Contribution is
+   protected by patent, you hereby grant to Brigham, with the right to
+   sublicense, a perpetual, worldwide, non-exclusive, no-charge,
+   royalty-free, irrevocable license under your interest in patent
+   rights covering the Contribution, to make, have made, use, sell and
+   otherwise transfer your Contribution, alone or in combination with
+   any other code.
+
+5. You acknowledge and agree that Brigham may incorporate your
+   Contribution into Slicer and may make Slicer available to members
+   of the public on an open source basis under terms substantially in
+   accordance with the Software License set forth in Part B of this
+   Agreement. You further acknowledge and agree that Brigham shall
+   have no liability arising in connection with claims resulting from
+   your breach of any of the terms of this Agreement.
+
+6. YOU WARRANT THAT TO THE BEST OF YOUR KNOWLEDGE YOUR CONTRIBUTION
+   DOES NOT CONTAIN ANY CODE THAT REQURES OR PRESCRIBES AN "OPEN
+   SOURCE LICENSE" FOR DERIVATIVE WORKS (by way of non-limiting
+   example, the GNU General Public License or other so-called
+   "reciprocal" license that requires any derived work to be licensed
+   under the GNU General Public License or other "open source
+   license").
+
+PART B. DOWNLOADING AGREEMENT - License from Brigham with Right to
+Sublicense ("Software License").
+
+1. As used in this Software License, "you" means the individual
+   downloading and/or using, reproducing, modifying, displaying and/or
+   distributing the Software and the institution or entity which
+   employs or is otherwise affiliated with such individual in
+   connection therewith. The Brigham and Women's Hospital,
+   Inc. ("Brigham") hereby grants you, with right to sublicense, with
+   respect to Brigham's rights in the software, and data, if any,
+   which is the subject of this Software License (collectively, the
+   "Software"), a royalty-free, non-exclusive license to use,
+   reproduce, make derivative works of, display and distribute the
+   Software, provided that:
+
+(a) you accept and adhere to all of the terms and conditions of this
+Software License;
+
+(b) in connection with any copy of or sublicense of all or any portion
+of the Software, all of the terms and conditions in this Software
+License shall appear in and shall apply to such copy and such
+sublicense, including without limitation all source and executable
+forms and on any user documentation, prefaced with the following
+words: "All or portions of this licensed product (such portions are
+the "Software") have been obtained under license from The Brigham and
+Women's Hospital, Inc. and are subject to the following terms and
+conditions:"
+
+(c) you preserve and maintain all applicable attributions, copyright
+notices and licenses included in or applicable to the Software;
+
+(d) modified versions of the Software must be clearly identified and
+marked as such, and must not be misrepresented as being the original
+Software; and
+
+(e) you consider making, but are under no obligation to make, the
+source code of any of your modifications to the Software freely
+available to others on an open source basis.
+
+2. The license granted in this Software License includes without
+   limitation the right to (i) incorporate the Software into
+   proprietary programs (subject to any restrictions applicable to
+   such programs), (ii) add your own copyright statement to your
+   modifications of the Software, and (iii) provide additional or
+   different license terms and conditions in your sublicenses of
+   modifications of the Software; provided that in each case your use,
+   reproduction or distribution of such modifications otherwise
+   complies with the conditions stated in this Software License.
+
+3. This Software License does not grant any rights with respect to
+   third party software, except those rights that Brigham has been
+   authorized by a third party to grant to you, and accordingly you
+   are solely responsible for (i) obtaining any permissions from third
+   parties that you need to use, reproduce, make derivative works of,
+   display and distribute the Software, and (ii) informing your
+   sublicensees, including without limitation your end-users, of their
+   obligations to secure any such required permissions.
+
+4. The Software has been designed for research purposes only and has
+   not been reviewed or approved by the Food and Drug Administration
+   or by any other agency. YOU ACKNOWLEDGE AND AGREE THAT CLINICAL
+   APPLICATIONS ARE NEITHER RECOMMENDED NOR ADVISED. Any
+   commercialization of the Software is at the sole risk of the party
+   or parties engaged in such commercialization. You further agree to
+   use, reproduce, make derivative works of, display and distribute
+   the Software in compliance with all applicable governmental laws,
+   regulations and orders, including without limitation those relating
+   to export and import control.
+
+5. The Software is provided "AS IS" and neither Brigham nor any
+   contributor to the software (each a "Contributor") shall have any
+   obligation to provide maintenance, support, updates, enhancements
+   or modifications thereto. BRIGHAM AND ALL CONTRIBUTORS SPECIFICALLY
+   DISCLAIM ALL EXPRESS AND IMPLIED WARRANTIES OF ANY KIND INCLUDING,
+   BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+   A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+   BRIGHAM OR ANY CONTRIBUTOR BE LIABLE TO ANY PARTY FOR DIRECT,
+   INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES
+   HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY ARISING IN ANY WAY
+   RELATED TO THE SOFTWARE, EVEN IF BRIGHAM OR ANY CONTRIBUTOR HAS
+   BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. TO THE MAXIMUM
+   EXTENT NOT PROHIBITED BY LAW OR REGULATION, YOU FURTHER ASSUME ALL
+   LIABILITY FOR YOUR USE, REPRODUCTION, MAKING OF DERIVATIVE WORKS,
+   DISPLAY, LICENSE OR DISTRIBUTION OF THE SOFTWARE AND AGREE TO
+   INDEMNIFY AND HOLD HARMLESS BRIGHAM AND ALL CONTRIBUTORS FROM AND
+   AGAINST ANY AND ALL CLAIMS, SUITS, ACTIONS, DEMANDS AND JUDGMENTS
+   ARISING THEREFROM.
+
+6. None of the names, logos or trademarks of Brigham or any of
+   Brigham's affiliates or any of the Contributors, or any funding
+   agency, may be used to endorse or promote products produced in
+   whole or in part by operation of the Software or derived from or
+   based on the Software without specific prior written permission
+   from the applicable party.
+
+7. Any use, reproduction or distribution of the Software which is not
+   in accordance with this Software License shall automatically revoke
+   all rights granted to you under this Software License and render
+   Paragraphs 1 and 2 of this Software License null and void.
+
+8. This Software License does not grant any rights in or to any
+   intellectual property owned by Brigham or any Contributor except
+   those rights expressly granted hereunder.
+
+PART C. MISCELLANEOUS
+
+This Agreement shall be governed by and construed in accordance with
+the laws of The Commonwealth of Massachusetts without regard to
+principles of conflicts of law. This Agreement shall supercede and
+replace any license terms that you may have agreed to previously with
+respect to Slicer.
+
+------------------------------------------------------------------------------
+[LOINC-notice.txt]  (third_party/licenses/LOINC-notice.txt)
+------------------------------------------------------------------------------
+
+Copyright Notice and License
+Definitions:
+
+“LOINC” – The work of clinical nomenclature called Logical Observation Identifiers Names and Codes, which provides a universal code system for identifying laboratory and clinical observations and related content.
+“Licensed Materials” – The collection of all of the following individually defined groups of artifacts and documents:
+“Group 1 Artifacts” – LOINC codes, LOINC Table (regardless of format), LOINC Table Core, and LOINC Changes File.
+“Group 1 Documents” – LOINC Release Notes and LOINC Users’ Guide
+“Group 2 Artifacts” – RELMA program, RELMA database and associated search index files, RELMA Community Mapping Feature Database, LOINC FHIR Terminology Services
+“Group 2 Documents” – RELMA Release Notes and RELMA Users’ Manual
+“Group 3 Artifacts” – LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Document Ontology OWL File, LOINC Hierarchies, LOINC Linguistic Variants Files, LOINC/RSNA Radiology Playbook, LOINC/IEEE Medical Device Code Mapping Table, LOINC Consumer Name File, LOINC Change Snapshot File, LOINC Imaging Document Codes File, LOINC Common UCUM Codes File, the Universal Lab Order Codes Value Set File, and the LOINC Ontology File.
+“Group 3 Documents” – Release and Readme notes associated with all of the Group 3 Artifacts.
+“You”, “Your”, and “User” – Either an individual or the organization specified by an individual on whose behalf these terms and conditions are being accepted.
+The Group 1 Artifacts and Group 1 Documents are Copyright © Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee. All rights reserved.
+
+The Group 2 Artifacts, Group 2 Documents, Group 3 Artifacts, and Group 3 Documents are Copyright © Regenstrief Institute, Inc. All rights reserved.
+
+LOINC® and RELMA® are registered United States trademarks of Regenstrief Institute, Inc. Regenstrief Institute, Inc. and, as applicable, the LOINC Committee reserve all other rights not expressly granted herein.
+
+Permission is hereby granted in perpetuity, without payment of license fees or royalties, to use, copy, or distribute the Licensed Materials for any commercial or non-commercial purpose, subject to the following terms and conditions:
+
+To prevent the dilution of LOINC’s purpose to provide a definitive standard for identifying clinical information in electronic reports, neither the Licensed Materials, nor any portion thereof, may be used for the purpose of developing or promulgating a different standard for identifying patient observations, such as, but not limited to, laboratory test results; other diagnostic service test results; clinical observations and measurements; reports produced by clinicians and diagnostic services about patients; panels, forms, and collections that define aggregations of these observations; and orders for these entities in electronic reports and messages.
+
+The name of, or any contents of, any fields in the Group 1 Artifacts shall not be changed. The contents of any fields in the Group 3 Artifacts shall not be changed. New fields may be added to the Group 1 Artifacts and Group 3 Artifacts to attach additional information to existing LOINC records.
+
+Records may be deleted from the LOINC Table or LOINC Table Core to deal with local requirements. Records also may be added to the LOINC Table and LOINC Table Core to deal with local requirements, provided that if new records are added, any new entry in the LOINC_NUM field of such new records must contain a leading alphabetic “X” so that the new codes and records cannot be confused with existing LOINC codes or new LOINC codes as they are defined in later releases, and further provided that reasonable efforts are made to submit requests to LOINC for new records to cover observations that are not found in the LOINC Table (and LOINC Table Core) in order to minimize the need for X-codes. Records deleted or added to deal with local requirements are not reflected in the official LOINC Table and LOINC Table Core maintained by the Regenstrief Institute, Inc.
+
+The Group 1 Documents, Group 2 Documents, and Group 3 Documents may not be modified, nor may derivative works be created, without the prior written permission of the Regenstrief Institute, Inc. To request written permission, please contact loinc@loinc.org.
+
+The LOINC parts and LOINC part hierarchies shall not be used in any manner except as they are presented in the Licensed Materials (and/or in other formats of distribution approved by Regenstrief Institute, Inc.) to organize, categorize, and be constituents of LOINC terms, and provide links to external terminologies. The LOINC parts and LOINC part hierarchies are subject to change, addition, modification, or deletion, without notice, and are not strictly managed under the same policies as LOINC terms.
+
+The RELMA program is provided with the full RELMA database and associated search index files, as well as the LOINC Table and other database tables comprising the RELMA database. In addition to its use with the RELMA program, the LOINC Table that is obtained with the RELMA program may be used independently and the LOINC Table also may be modified as permitted herein. The other database tables from the RELMA database or the associated search index files may not be used or modified except in conjunction with the authorized use of the RELMA program, unless prior written permission is granted by the Regenstrief Institute, Inc. To request written permission, please contact loinc@loinc.org. The RELMA program also provides access to certain internet-based content copyrighted by Regenstrief Institute, Inc. No additional permission to modify or distribute this internet-based content is granted through the use of the RELMA program.
+
+The RELMA program includes the RELMA Community Mappings feature and access to the RELMA Community Mappings feature database. Use of the RELMA Community Mappings feature and the RELMA Community Mappings feature database is subject to the following terms and conditions:
+
+The accuracy and completeness of the information in the RELMA Community Mappings feature is not verified by Regenstrief Institute, Inc. or the LOINC Committee. Neither Regenstrief Institute, Inc. nor the LOINC Committee is liable for the information provided by the RELMA Community Mappings feature. Each user accepts the risk of using the information provided by the RELMA Community Mappings feature.
+The information provided by the RELMA Community Mappings feature may not be copied or distributed.
+Access to the information provided by the RELMA Community Mappings feature may not be shared.
+Reasonable efforts will be made to submit new mappings back to the RELMA Community Mappings feature database. New mappings may contain the following information (as applicable):
+Local battery/panel/test code;
+Local battery/panel/test name/description;
+Units of Measure;
+LOINC code to which it is mapped;
+Date of mapping;
+Language of test names;
+Version of LOINC used to do the mapping; and/or
+Contact information.
+If mappings are submitted on behalf of an organization, the person submitting the mappings represents that he or she has the authority to submit the mappings.
+Regenstrief Institute, Inc. shall have a non-exclusive, irrevocable license, without payment or fees, to use mappings submitted to the RELMA Community Mappings feature for any and all purposes related to LOINC, RELMA, and Regenstrief Institute Inc.’s mission, including, but not limited to:
+Modifying the information;
+Making information publicly available;
+Performing aggregate analysis;
+Conducting and publishing research; and
+Developing and enhancing LOINC and associated software tools.
+LOINC codes and other information from the LOINC Table (and LOINC Table Core) may be used in electronic records and electronic messages in conjunction with laboratory test results and clinical observations without the need to include this Copyright Notice and License or a reference thereto in the message (and without the need to include all fields required by Section 10 hereof). When the LOINC code (from the LOINC_NUM field) is included in the message, inclusion of the corresponding LOINC short name (from the SHORTNAME field), the LOINC long common name (from the LONG_COMMON_NAME field), or for laboratory terms, the LOINC Display name (from the DisplayName field) in the message is encouraged (but not required) if the message provides a place for a text name representation of the code.
+
+There is no limit on the number of copies of the Licensed Materials that may be made and distributed, provided that each copy must include this Copyright Notice and License, and must include the appropriate version number of the Licensed Materials if the Licensed Materials have a version number, or the release date if the Licensed Materials do not have a version number. This Copyright Notice and License must appear on every printed copy of the LOINC Table (and LOINC Table Core). Where the Licensed Materials are distributed on a fixed storage medium (such as CD-ROM), a printed copy of this Copyright Notice and License must be included on or with the storage medium, and a text file containing this information also must be stored on the storage medium in a file called “license.txt”. Where the Licensed Materials are distributed via the Internet, this Copyright Notice and License must be accessible on the same Internet page from which the Licensed Materials are available for download. This Copyright Notice and License must appear verbatim on every electronic or printed copy of the RELMA Users’ Manual and the LOINC Users’ Guide.
+
+Subject to Section 1 and the other restrictions hereof, portions of the Group 1 Artifacts or Group 3 Artifacts may be incorporated into other products and services, such as laboratory test compendiums, data dictionaries, online terminology services, software programs including mobile device applications, and documents such as implementation guides and other technical specifications, provided that:
+
+Any such product or service includes the following notice:
+
+“This material contains content from LOINC (http://loinc.org). LOINC is copyright © Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.”
+
+Where the product or service is distributed with a printed license, this notice must appear in the printed license. Where the product or service is distributed on a fixed storage medium, a text file containing this notice also must be stored on the storage medium in a file called “LOINC_short_license.txt.” Where the product or service is distributed via the Internet, this notice must be accessible on the same Internet page from which the product is available for download. Where the product or service is provided as an online resource (e.g., to be accessed programmatically through an application programming interface (API) or through a user interface), this notice must be available in the license or terms of use.
+
+Any such product or service is either (1) in compliance with all applicable third-party copyright license terms as described in the Notice of Third-Party Content and Copyright Terms section of this license, or (2) third-party copyrighted contents (e.g., third-party survey instruments and answers) are deleted; and
+
+Any information that is extracted from the Licensed Material must always be associated with the corresponding identifier from LOINC (e.g., LOINC code, LOINC Answer List ID, LOINC Answer String ID, LOINC Part Number, or LOINC Group ID) and include the corresponding LOINC display name:
+
+For LOINC codes, one of the following LOINC display names from the LOINC Table, LOINC Table Core, or the LOINC Linguistic Variants File (as available) must be included:
+The fully-specified name, which includes the information from the COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, and METHOD_TYP fields;
+The LOINC short name (from the SHORTNAME field);
+The LOINC long common name (from the LONG_COMMON_NAME field); or
+The LOINC Display name (from the DisplayName field).
+For LOINC identifiers other than LOINC codes, the primary corresponding display name (e.g. LOINC Answer List Name, LOINC Answer String Display Text, LOINC Part Name, LOINC Group Name) must be included.
+Including the appropriate version number of the Licensed Material is strongly encouraged, but not required.
+
+When LOINC codes are included, including the LOINC term status is strongly encouraged, but not required.
+
+When material from Group 3 Artifacts is included, any other fields that would be necessary to preserve the meaning of the contents and relationships between records are included.
+
+Use and distribution of the Licensed Materials in ways that are not specifically discussed herein shall always be accompanied by the notice provided in Section 10 hereof. The guidelines for providing the notice that is contained in the first paragraph of Section 10 also shall apply. Questions about whether a particular use of any of the Licensed Materials is permissible may be directed to Regenstrief Institute, Inc. by email at loinc@loinc.org.
+
+Regenstrief Institute, Inc. shall be notified via email at loinc@loinc.org prior to translation of any of the Licensed Materials into a language other than English. Any such translation is a derivative work, and Regenstrief Institute, Inc. shall be assigned and hereby is assigned all right, title and interest in and to such derivative work: (a) to Regenstrief Institute, Inc. and the LOINC Committee if the translation is a derivative of Group 1 Artifacts or Group 1 Documents, and (b) to Regenstrief Institute, Inc. if the translation is a derivative work of the Group 2 Artifacts, Group 2 Documents, or Group 3 Artifacts. Further, you shall fully cooperate with Regenstrief Institute, Inc. in the filing and reviewing of any copyright applications or other legal documents, and signing any documents (such as declarations, assignments, affidavits, and the like) that are reasonably necessary to the preparation of any such copyright application. The assignment granted by this paragraph extends to all proprietary rights in the United States, and in all other countries. Except for the right to translate the Licensed Materials into a language other than English pursuant to this section, no other right to create a derivative work of any of the Licensed Materials is hereby granted. All such translations shall be electronically transmitted to Regenstrief Institute, Inc., and such translations shall be made available and are subject to the same license rights and restrictions contained herein. Regenstrief Institute, Inc. will give credit on the LOINC website and on applicable screens in RELMA to the party that created the translation. Accuracy of each translation is not verified by Regenstrief Institute, Inc. or the LOINC Committee.
+
+The names “Regenstrief,” “Regenstrief Foundation,” “Regenstrief Institute, Inc.,” and “LOINC Committee” may not be used in a way which could be interpreted as an endorsement or a promotion of any product or service without prior written permission of the Regenstrief Institute, Inc. Further, no right to use the trademarks of Regenstrief Institute, Inc. is licensed hereunder. To request written permission, please contact loinc@loinc.org.
+
+DISCLAIMER: REGENSTRIEF INSTITUTE, INC. AND THE LOINC COMMITTEE, AS WELL AS ANY CONTRIBUTORS WHO HAVE PROVIDED TRANSLATIONS OF THE LICENSED MATERIALS, DO NOT ACCEPT LIABILITY FOR ANY OMISSIONS OR ERRORS IN THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE LOINC COMMITTEE. THE LICENSED MATERIALS AND ALL OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE LOINC COMMITTEE ARE PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND. ANY EXPRESSED OR IMPLIED WARRANTIES ARE HEREBY DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES ARISING FROM A COURSE OF DEALING, TRADE USAGE, OR TRADE PRACTICE. FURTHER, NO WARRANTY OR REPRESENTATION IS MADE CONCERNING THE ACCURACY, COMPLETENESS, SEQUENCE, TIMELINESS OR AVAILABILITY OF THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE LOINC COMMITTEE, OR ANY TRANSLATIONS OR DERIVATIVE WORKS OF ANY OF THE FOREGOING. IN NO EVENT SHALL REGENSTRIEF INSTITUTE, INC. OR THE LOINC COMMITTEE OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, RELIANCE, OR CONSEQUENTIAL DAMAGES OR ATTORNEYS’ FEES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; OPPORTUNITY COSTS; LOSS OF USE, DATA, SAVINGS OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE LOINC COMMITTEE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE OR IF SUCH DAMAGES WERE FORESEEABLE. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF CERTAIN WARRANTIES OR CONDITIONS, SO SOME OF THE FOREGOING MAY NOT APPLY TO YOU.
+
+This license shall be construed and interpreted in accordance with the laws of the State of Indiana, United States of America, excluding its conflicts of law rules.
+
+Notice of Third-Party Content and Copyright Terms
+A small portion of the content of the Licensed Material consists of content subject to copyright protection by third parties. This third-party content is either used with permission or under the applicable terms of use. In all such cases, we have included the copyright notice. The copyright of the LOINC codes per se remains owned by Regenstrief Institute, Inc. and the LOINC Committee and subject to the LOINC Copyright Notice and License.
+
+Some included third-party content requires attribution specific to a particular LOINC code or codes. Such third-party content is identified in the LOINC Table and LOINC Table Core by the applicable copyright notice (up to 250 characters) stored in the EXTERNAL_COPYRIGHT_NOTICE field. In RELMA and our web-based search application (http://search.loinc.org), the third-party content is highlighted as follows: When such content appears in a search result grid, the programs will display a field with a link to a page containing the copyright notice and terms of use for that content. The programs may also visually highlight the rows of these LOINC codes.
+
+When LOINC terms with third-party copyright are included in any products or services as described in Section 10 above, the copyright notice contained in the EXTERNAL_COPYRIGHT_NOTICE field must be included in addition to the LOINC copyright notice. Any use or administration of third-party content is in accordance with the third-party content owner’s license and/or terms of use; third-party content is included in LOINC to allow standardization of clinical data associated with the third-party copyright content. Inclusion in LOINC does not imply permission to use or administer third-party content without following the third-party content owner’s license and/or terms of use.
+
+Required Attributions for Third-Party Content not identified as such in the EXTERNAL_COPYRIGHT_NOTICE field:
+
+A. The LOINC Part File, LOINC/SNOMED CT Expression Association and Map Sets File, the LOINC Ontology File, RELMA database and associated search index files include SNOMED Clinical Terms (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO) under license. All rights are reserved. SNOMED CT® was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. Use of SNOMED CT content is subject to the terms and conditions set forth in the SNOMED CT Affiliate License Agreement. It is the responsibility of those implementing this product to ensure they are appropriately licensed and for more information on the license, including how to register as an Affiliate Licensee, please refer to https://www.snomed.org/get-snomed or info@snomed.org. Under the terms of the Affiliate License, use of SNOMED CT in countries that are not IHTSDO Members is subject to reporting and fee payment obligations. However, IHTSDO agrees to waive the requirements to report and pay fees for use of SNOMED CT content included in the LOINC Part Mapping and LOINC Term Associations for purposes that support or enable more effective use of LOINC.
+
+B. The LOINC Answer File, the LOINC Ontology File, RELMA database and associated search index files include content from SNOMED Clinical Terms (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO) under license. All rights are reserved. SNOMED CT® was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. Use of SNOMED CT content is subject to the terms and conditions set forth in the SNOMED CT Affiliate License Agreement. It is the responsibility of those implementing this product to ensure they are appropriately licensed and for more information on the license, including how to register as an Affiliate Licensee, please refer to https://www.snomed.org/get-snomed or info@snomed.org. This may incur a fee in SNOMED International non-Member countries.
+
+C. The LOINC Part File, LOINC Answer File, RELMA database and associated search index files includes content from the U.S. Edition to SNOMED CT, which is developed and maintained by the U.S. National Library of Medicine and is available to authorized UMLS Metathesaurus Licensees from the UTS Downloads site at https://uts.nlm.nih.gov/uts/.
+
+D. The Unified Medical Language System (UMLS) from the U.S. National Library of Medicine (https://www.nlm.nih.gov/research/umls/) is the source of RxNorm® content and is available to authorized UMLS Metathesaurus Licensees.
+
+E. The LOINC/RSNA Radiology Playbook and the LOINC Part File contain content from RadLex® (http://www.radlex.org), copyright © 2005-2025, The Radiological Society of North America, Inc., available at no cost under the license at https://www.rsna.org/uploadedFiles/RSNA/Content/Informatics/RadLex_License_Agreement_and_Terms_of_Use_V2_Final.pdf.
+
+F. The LOINC/IEEE Medical Device Code Mapping Table contains content from IEEE (http://ieee.org), copyright © 2019 IEEE.
+
+G. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2024, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED “AS IS”. ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+------------------------------------------------------------------------------
+[UCUM-notice.txt]  (third_party/licenses/UCUM-notice.txt)
+------------------------------------------------------------------------------
+
+This product includes UCUM unit codes as published in DICOM PS3.16.
+UCUM is Copyright (c) 1999-2024 Regenstrief Institute, Inc. All rights
+reserved. Licensed under the UCUM License, Version 1.1; the License is at
+https://ucum.org/license. UCUM content is distributed on an "AS IS" basis,
+without warranties or conditions of any kind, either express or implied.

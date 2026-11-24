@@ -1,0 +1,85 @@
+[package]
+name = "dicom-rust"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+authors = ["Thales Matheus Mendonça Santos"]
+rust-version = "1.88"
+description = "DICOM toolkit: Part 10 files, pixel data codecs, rendering, DIMSE and DICOMweb networking"
+readme = "README.md"
+repository = "https://github.com/ThalesMMS/dicom-rust"
+keywords = ["dicom", "medical-imaging", "pacs", "dicomweb", "radiology"]
+categories = ["science", "multimedia::images", "parser-implementations", "network-programming", "encoding"]
+include = [
+    "/Cargo.toml",
+    "/README.md",
+    "/LICENSE",
+    "/NOTICES",
+    "/CHANGELOG.md",
+    "/VERSIONING.md",
+    "/src/**",
+    "/examples/**",
+    "/third_party/**",
+]
+[features]
+default = ["net", "tls", "dicomweb", "codecs", "render", "codes", "dsig", "deid-encrypted"]
+net = ["dep:socket2"]
+tls = ["net", "dep:rustls", "dep:rustls-webpki", "dep:x509-parser", "dep:rustls-native-certs"]
+dicomweb = ["net", "dep:num-bigint", "dep:p256", "dep:p384", "dep:p521", "dep:rand_core", "dep:sha1"]
+codecs = ["jpeg", "jpeg-lossless", "jpeg-ls", "jpeg2000", "jpeg-xl"]
+jpeg = []
+jpeg-lossless = []
+jpeg-ls = []
+jpeg2000 = []
+jpeg-xl = ["jpeg"]
+render = ["codes", "jpeg", "dep:num-bigint"]
+codes = []
+dsig = ["dep:num-bigint", "dep:rsa", "dep:p224", "dep:p256", "dep:p384", "dep:p521"]
+deid-encrypted = ["dsig", "dep:aes", "dep:cbc", "dep:des", "dep:sha1", "dep:rand_core"]
+[dependencies]
+socket2 = { version = "0.6", optional = true }
+unicode-general-category = "1"
+unicode-normalization = "0.1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+uuid = { version = "1", features = ["v4"] }
+sha2 = "0.10"
+md-5 = "0.10"
+regex = "1"
+fs4 = { version = "0.13", features = ["sync"] }
+num-bigint = { version = "0.4", optional = true }
+rsa = { version = "0.10", default-features = false, features = ["std", "encoding", "pkcs1v15", "getrandom"], optional = true }
+aes = { version = "0.8", optional = true }
+cbc = { version = "0.1", features = ["std"], optional = true }
+des = { version = "0.8", optional = true }
+sha1 = { version = "0.11", optional = true }
+rand_core = { version = "0.6", features = ["getrandom"], optional = true }
+p224 = { version = "=0.14.0-rc.15", default-features = false, features = ["ecdsa", "pkcs8", "std"], optional = true }
+p256 = { version = "0.14", default-features = false, features = ["ecdsa", "pkcs8", "std"], optional = true }
+p384 = { version = "0.14", default-features = false, features = ["ecdsa", "pkcs8", "std"], optional = true }
+p521 = { version = "0.14", default-features = false, features = ["ecdsa", "pkcs8", "std"], optional = true }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"], optional = true }
+rustls-webpki = { version = "0.103", default-features = false, features = ["ring", "std"], optional = true }
+x509-parser = { version = "0.18", optional = true }
+rustls-native-certs = { version = "0.8", optional = true }
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Networking_WinSock", "Win32_Security", "Win32_Storage_FileSystem", "Win32_Security_Authorization", "Win32_System_IO", "Win32_System_SystemInformation", "Win32_System_Threading", "Wdk_Foundation", "Wdk_Storage_FileSystem"] }
+memmap2 = "0.9"
+[target.'cfg(unix)'.dependencies]
+rustix = { version = "1", features = ["fs", "std", "system"] }
+[lib]
+bench = false
+[package.metadata.docs.rs]
+all-features = true
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+hex = "0.4"
+[[example]]
+name = "decode_pixels"
+required-features = ["render"]
+[[example]]
+name = "dimse_loopback"
+required-features = ["net"]
+[[example]]
+name = "dicomweb_search"
+required-features = ["dicomweb"]

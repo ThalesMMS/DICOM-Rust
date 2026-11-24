@@ -1,0 +1,427 @@
+{
+  "schema": 1,
+  "about": "Material in this package derived from other works. Paths are relative to the package root; a path ending in / is a directory. 'notice' is required (the licence or terms ask for it), courtesy (attribution not required) or none. 'status' is ok, or decision while the terms of an entry are not settled (--strict then fails). third_party/gen_notices.py turns this file into NOTICES.",
+  "entries": [
+    {
+      "id": "go-standard-library",
+      "title": "Go standard library and Go sub-repositories (translated algorithms)",
+      "kind": "translated-code",
+      "paths": [
+        "src/deflater.rs",
+        "src/object/inflate.rs",
+        "src/nifti/gzip.rs",
+        "src/encapimage/png.rs",
+        "src/render/png_encode.rs",
+        "src/codec/jpeg/stdjpeg/",
+        "src/numtext.rs",
+        "src/numtext_pow10.rs",
+        "src/textfmt.rs",
+        "src/dicomjson/sizedparse.rs",
+        "src/fmath.rs",
+        "src/fmath/rand.rs",
+        "src/fmath/rand/tables.rs",
+        "src/dicomdir/pathrules.rs",
+        "src/dicomjson/jsonwire.rs",
+        "src/dicomjson/jsonwire/stream.rs",
+        "src/net/audit/jsonwire.rs",
+        "src/net/audit/timetext.rs",
+        "src/dicomxml/xmlwire.rs",
+        "src/encapdoc/urlrules.rs",
+        "src/net/dicomweb/urlrules.rs",
+        "src/tractography/urlrules.rs",
+        "src/net/dicomweb/mimeheader.rs",
+        "src/render/stablesort.rs",
+        "src/roi/pdqsort.rs",
+        "src/roi/pdqsort_by.rs",
+        "src/dsig/x509check.rs",
+        "src/charset/codec.rs",
+        "src/charset/japanese.rs",
+        "src/charset/lookup.rs",
+        "src/hl7/charset.rs"
+      ],
+      "upstream": {
+        "project": "The Go Programming Language (standard library 1.26; golang.org/x/text v0.21.0; golang.org/x/crypto cryptobyte)",
+        "url": "https://go.dev/",
+        "revision": "go1.26.4; x/text v0.21.0"
+      },
+      "copyright": ["Copyright 2009 The Go Authors."],
+      "license": "BSD-3-Clause",
+      "license_files": ["third_party/licenses/BSD-3-Clause.Go-Authors.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "These files translate algorithms of the Go standard library and of golang.org/x/text and golang.org/x/crypto into Rust so that results are byte-identical: the DEFLATE encoder and decoder with zlib and gzip framing, the PNG reader and writer, the baseline/progressive JPEG decoder and baseline encoder, decimal and floating-point parsing and formatting (including the table of powers of ten), quoting of strings, mathematical functions, the seeded pseudo-random source and its tables, path cleaning, JSON and XML tokenizers and printers, URL and media-type parsing, RFC 3339 times, sorting, certificate DER checks and the multi-byte character-set decoders. Modified: translated to Rust, error values adapted."
+    },
+    {
+      "id": "fdlibm",
+      "title": "fdlibm / FreeBSD msun (logarithm, log1p, erf, cbrt)",
+      "kind": "translated-code",
+      "paths": ["src/fmath.rs"],
+      "upstream": {
+        "project": "fdlibm (Sun Microsystems), via FreeBSD /usr/src/lib/msun",
+        "url": "https://www.netlib.org/fdlibm/",
+        "revision": "e_log.c, s_log1p.c, s_erf.c, s_cbrt.c"
+      },
+      "copyright": ["Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved."],
+      "license": "fdlibm (permissive, notice must be preserved)",
+      "license_files": ["third_party/licenses/fdlibm.Sun-Microsystems.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The logarithm, log1p, error function and cube root keep the method, constants and coefficients of fdlibm (developed at SunPro / SunSoft). The permission notice must be preserved."
+    },
+    {
+      "id": "cephes",
+      "title": "Cephes Math Library (sine, cosine, tangent)",
+      "kind": "translated-code",
+      "paths": ["src/fmath.rs"],
+      "upstream": {
+        "project": "Cephes Math Library 2.8, Stephen L. Moshier",
+        "url": "https://www.netlib.org/cephes/",
+        "revision": "cmath/sin.c"
+      },
+      "copyright": ["Copyright 1984, 1987, 1989, 1992, 2000 by Stephen L. Moshier"],
+      "license": "Cephes (free use, no conditions)",
+      "license_files": [],
+      "notice": "courtesy",
+      "status": "ok",
+      "text": "The sine, cosine and tangent use the Cephes argument reduction and polynomial coefficients. The Cephes distribution states that the software may be used freely; attribution is kept as a courtesy."
+    },
+    {
+      "id": "whatwg-encoding-indexes",
+      "title": "WHATWG Encoding Standard indexes (character-set tables)",
+      "kind": "data-table",
+      "paths": ["src/charset/tables.rs", "src/hl7/tables.rs", "src/hl7/tables.bin"],
+      "sha256": {"src/hl7/tables.bin": "8393fff1fc0b85658759cf895f6f8408703c9e428a72a65e8e9f2c7aa7a29b6f"},
+      "upstream": {
+        "project": "WHATWG Encoding Standard index files (as tabulated by golang.org/x/text v0.21.0)",
+        "url": "https://encoding.spec.whatwg.org/",
+        "revision": "index-jis0208, index-jis0212, index-euc-kr, index-gb18030, index-gbk, index-big5, index-iso-8859-*, index-windows-874"
+      },
+      "copyright": ["Copyright (c) WHATWG (Apple, Google, Mozilla, Microsoft).", "Copyright 2009 The Go Authors (tabulation)."],
+      "license": "BSD-3-Clause (WHATWG, for portions incorporated into source code) AND BSD-3-Clause (Go)",
+      "license_files": ["third_party/licenses/BSD-3-Clause.WHATWG.txt", "third_party/licenses/BSD-3-Clause.Go-Authors.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The ISO 8859, TIS-620, JIS X 0208/0212, KS X 1001, GB 2312/GBK/GB 18030 and Big5 mapping tables are the WHATWG Encoding Standard indexes in the tabulation of golang.org/x/text."
+    },
+    {
+      "id": "unicode-character-database",
+      "title": "Unicode Character Database (letter, mark and normalization tables)",
+      "kind": "data-table",
+      "paths": ["src/personname/fuzzy/tables.rs", "src/qrmatch/tables.rs"],
+      "upstream": {
+        "project": "Unicode Character Database (as tabulated by the Go unicode package and golang.org/x/text/unicode/norm)",
+        "url": "https://www.unicode.org/ucd/",
+        "revision": "Unicode 15.0 as shipped with go1.26.4"
+      },
+      "copyright": ["Copyright (c) 1991-2026 Unicode, Inc."],
+      "license": "Unicode-3.0 AND BSD-3-Clause",
+      "license_files": ["third_party/licenses/Unicode-3.0.txt", "third_party/licenses/BSD-3-Clause.Go-Authors.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "Ranges of letters and non-spacing marks and the decomposition data used for fuzzy person-name and text matching are derived from the Unicode Character Database. The Unicode licence asks that its notice appear with the data or in the documentation."
+    },
+    {
+      "id": "dcmtk-standard-dictionary",
+      "title": "DCMTK dicom.dic (standard data dictionary tables)",
+      "kind": "data-table",
+      "paths": ["src/object/dict_names.rs", "src/object/dict_tables.rs", "src/object/dict_retired.rs", "src/object/dict_vm.rs", "src/qrmatch/tables.rs"],
+      "upstream": {
+        "project": "DCMTK dcmdata/data/dicom.dic (generated by OFFIS from DICOM PS3.6-2026d and PS3.7-2026d)",
+        "url": "https://github.com/DCMTK/dcmtk",
+        "revision": "8d68392db66cd69e13dc878dc9889681062ad479"
+      },
+      "copyright": ["Copyright (C) 1994-2026, OFFIS e.V."],
+      "license": "BSD-3-Clause",
+      "license_files": ["third_party/licenses/BSD-3-Clause.DCMTK.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The tag, keyword, name, VR, VM and retired tables were generated from DCMTK's dicom.dic. The definitions are those of the DICOM Standard; the compiled file is OFFIS work and its notice is reproduced. No OFFIS endorsement is implied."
+    },
+    {
+      "id": "dcmtk-gdcm-private-dictionary",
+      "title": "DCMTK private.dic and GDCM privatedicts.xml (selected private dictionary definitions)",
+      "kind": "data-table",
+      "paths": ["src/dictionary/curated_tables.rs", "src/dictionary/curated.rs"],
+      "upstream": {
+        "project": "DCMTK dcmdata/data/private.dic; GDCM Source/DataDictionary/privatedicts.xml (partly converted from dicom3tools)",
+        "url": "https://github.com/DCMTK/dcmtk ; https://github.com/malaterre/GDCM",
+        "revision": "DCMTK ac002900cab167509881e5b837cdef5dcb07cd37 (3.6.9); GDCM 2cd05d13222b175e791b5ae3c08feeabcc1ed1f0"
+      },
+      "copyright": [
+        "Copyright (C) 1994-2020, OFFIS e.V.",
+        "Copyright (c) 2006-2016 Mathieu Malaterre; Copyright (c) 1993-2005 CREATIS",
+        "Copyright (c) 1993-2006, David A. Clunie DBA PixelMed Publishing"
+      ],
+      "license": "BSD-3-Clause AND BSD-3-Clause AND dicom3tools BSD-style",
+      "license_files": ["third_party/licenses/BSD-3-Clause.DCMTK.txt", "third_party/licenses/BSD-3-Clause.GDCM.txt", "third_party/licenses/BSD.dicom3tools.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "246 private definitions from DCMTK and 48 from GDCM, each record carrying its source line, commit, hash and licence; the full notices are also returned at run time by dictionary::curated::license_notice(). No endorsement by OFFIS, the GDCM authors, CREATIS or PixelMed Publishing is implied."
+    },
+    {
+      "id": "itk-ported-filters",
+      "title": "Insight Toolkit (N4 bias correction, histogram matching, grayscale reconstruction, morphological watershed)",
+      "kind": "translated-code",
+      "paths": ["src/imagefilter/n4.rs", "src/imagefilter/histogram_matching.rs", "src/roi/grayscale_reconstruction.rs", "src/roi/watershed.rs"],
+      "upstream": {
+        "project": "ITK (Insight Toolkit)",
+        "url": "https://github.com/InsightSoftwareConsortium/ITK",
+        "revision": "35b196e13c366e0386389a71c936a0436c568cea"
+      },
+      "copyright": ["Copyright 1999-2019 Insight Software Consortium", "Copyright 2020-present NumFOCUS"],
+      "license": "Apache-2.0",
+      "license_files": ["third_party/licenses/Apache-2.0.txt", "third_party/licenses/ITK-NOTICE.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "Modified translations of itkN4BiasFieldCorrectionImageFilter, itkBSplineScatteredDataPointSetToImageFilter, itkBSplineControlPointImageFilter, itkHistogramMatchingImageFilter and Histogram::Quantile, itkReconstructionImageFilter, the regional-extrema, h-extrema and fill-hole filters and itkMorphologicalWatershedFromMarkersImageFilter. Changes: rewritten over dense float volumes with explicit neighbour offsets, budgets, cancellation, block-averaged estimation and the input checks listed in each file. Apache-2.0 section 4 requires the licence, ITK's NOTICE and a statement of changes in each modified file."
+    },
+    {
+      "id": "itk-vtk-skimage-behaviour",
+      "title": "ITK, VTK and scikit-image (behaviour followed, test values reused; no code copied)",
+      "kind": "attribution",
+      "paths": ["src/registration/", "src/optimize/", "src/dsa/", "src/spatialreg/", "src/roi/line_profile.rs", "src/roi/livewire.rs", "src/roi/autothreshold/"],
+      "upstream": {
+        "project": "ITK 35b196e1 / 519a94d954; VTK 9.6.2; scikit-image 0.26.0",
+        "url": "https://github.com/InsightSoftwareConsortium/ITK ; https://github.com/Kitware/VTK ; https://github.com/scikit-image/scikit-image",
+        "revision": "see project"
+      },
+      "copyright": ["Copyright NumFOCUS (ITK)", "Copyright (c) 1993-2015 Ken Martin, Will Schroeder, Bill Lorensen (VTK)", "Copyright the scikit-image team"],
+      "license": "Apache-2.0; BSD-3-Clause; BSD-3-Clause",
+      "license_files": [],
+      "notice": "courtesy",
+      "status": "ok",
+      "text": "Registration metrics, optimizers, transform file formats, displacement-field inversion, Bresenham lines, livewire paths and automatic thresholds follow the documented behaviour and conventions of these projects and reuse the expected values of some of their tests. The code is written from the definitions and formats; no source was copied, so no licence notice is required."
+    },
+    {
+      "id": "go-dicom-j2k-decoder",
+      "title": "go-dicom JPEG 2000 Part 1 decoder",
+      "kind": "translated-code",
+      "paths": ["src/codec/jpeg2000/j2kcore/"],
+      "upstream": {
+        "project": "amrshadid/go-dicom compress/jpeg2000",
+        "url": "https://github.com/amrshadid/go-dicom",
+        "revision": "daecea14be3fbc27300aff20912ed7c8c8a0d599 (v1.6.0)"
+      },
+      "copyright": ["Copyright (c) 2024 go-dicom contributors"],
+      "license": "MIT",
+      "license_files": ["third_party/licenses/MIT.go-dicom-contributors.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The codestream parser, packet decoder, tag trees, MQ decoder, tier-1 decoder and inverse wavelet transforms are a modified translation of this decoder. Added later from ISO/IEC 15444-1 and 15444-15: every progression order and POC, precincts, code-block styles, PPM/PPT, subsampling, reduction, quality layers, regions, RGN, HT code-blocks and resource limits."
+    },
+    {
+      "id": "htj2k-vlc-codebook",
+      "title": "HTJ2K CxtVLC codebook (ISO/IEC 15444-15)",
+      "kind": "data-table",
+      "paths": ["src/codec/jpeg2000/htj2k/vlc_codebook.rs"],
+      "upstream": {
+        "project": "go-jpeg2000 internal/entropy/ht_luts.go, itself from OpenJPEG ht_dec.c / t1_ht_luts.h",
+        "url": "https://github.com/mrjoshuak/go-jpeg2000 ; https://github.com/uclouvain/openjpeg",
+        "revision": "go-jpeg2000 8f771261d4f6c05dbbb0bdba9c70af57aca62d95 (v1.3.0)"
+      },
+      "copyright": ["Copyright 2024 Joshua Kolden", "Copyright (c) 2021, Aous Naman; Kakadu Software Pty Ltd; The University of New South Wales"],
+      "license": "Apache-2.0 AND BSD-2-Clause",
+      "license_files": ["third_party/licenses/Apache-2.0.txt", "third_party/licenses/Apache-2.0.go-jpeg2000-notice.txt", "third_party/licenses/BSD-2-Clause.OpenJPEG-HT.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The codewords of the normative CxtVLC tables were obtained by inverting the decoder lookup tables of go-jpeg2000, which derive from OpenJPEG. Only the codeword data was used; the encoder and decoder are independent."
+    },
+    {
+      "id": "brotli-dictionary",
+      "title": "Brotli static dictionary and word transforms (RFC 7932)",
+      "kind": "data-table",
+      "paths": ["src/codec/jpegxl/brotli_dictionary.bin", "src/codec/jpegxl/brotli_tables.rs", "src/codec/jpegxl/LICENSE.brotli"],
+      "sha256": {"src/codec/jpegxl/brotli_dictionary.bin": "20e42eb1b511c21806d4d227d07e5dd06877d8ce7b3a817f378f313653f35c70"},
+      "upstream": {
+        "project": "Brotli reference implementation c/common/dictionary.c; RFC 7932 Appendix A and B",
+        "url": "https://github.com/google/brotli",
+        "revision": "ed738e842d2fbdf2d6459e39267a633c4a9b2f5d (v1.1.0)"
+      },
+      "copyright": ["Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors."],
+      "license": "MIT",
+      "license_files": ["src/codec/jpegxl/LICENSE.brotli"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The 122784-byte static dictionary (SHA-256 as stated in RFC 7932) and the 121 word transforms. The decoder is written from RFC 7932."
+    },
+    {
+      "id": "slicer-vr-presets",
+      "title": "3D Slicer volume rendering presets CT-Chest-Contrast-Enhanced, CT-Coronary-Arteries-3 and CT-Muscle",
+      "kind": "data-table",
+      "paths": ["src/render/vr_transfer.rs"],
+      "upstream": {
+        "project": "3D Slicer Modules/Loadable/VolumeRendering/Resources/presets.xml, presets CT-Chest-Contrast-Enhanced, CT-Coronary-Arteries-3, CT-Muscle",
+        "url": "https://github.com/Slicer/Slicer",
+        "revision": "74c135801f704ade9660d894a928d8b4b93d7a28"
+      },
+      "copyright": ["All or portions of this licensed product (such portions are the \"Software\") have been obtained under license from The Brigham and Women's Hospital, Inc. and are subject to the following terms and conditions: the 3D Slicer Contribution and Software License Agreement, version 1.0, reproduced in full in [Slicer-License-1.0.txt] (Part B is the licence under which this data is used)."],
+      "license": "LicenseRef-3D-Slicer-1.0",
+      "license_files": ["third_party/licenses/Slicer-License-1.0.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "The colour and opacity points and the lighting coefficients of three presets, as SLICER_CT_CHEST_CONTRAST_ENHANCED, SLICER_CT_CORONARY_ARTERIES_3 and SLICER_CT_MUSCLE (SlicerVrPreset) in src/render/vr_transfer.rs; VrTransferFunction::new_ct_muscle uses the CT-Muscle colours. This is a modified version of the Software: in each preset the points below the last fully transparent opacity point are dropped and the positions are rewritten over 0..1 of the remaining Hounsfield range (window_hu); colours, opacities and coefficients are unchanged. Part B of the licence requires its terms, prefaced by the sentence above, in every source and executable form and in user documentation, and states that the Software was designed for research purposes only, has not been reviewed or approved by the FDA or any other agency, and that clinical applications are neither recommended nor advised."
+    },
+    {
+      "id": "dicom-standard",
+      "title": "DICOM Standard content (PS3.3, PS3.4, PS3.6, PS3.14, PS3.15, PS3.16)",
+      "kind": "standard-content",
+      "paths": [
+        "src/dictionary/uid_tables.rs",
+        "src/validation/iod/tables.rs",
+        "src/sr/template_catalog_tables.rs",
+        "src/codes/",
+        "src/deid/tables.rs",
+        "src/object/transfer_tables.rs",
+        "src/multiframe/bodyparts.rs",
+        "src/display/gsdf.rs"
+      ],
+      "upstream": {
+        "project": "DICOM Standard, NEMA (DocBook part03, part04, part06, part15, part16)",
+        "url": "https://www.dicomstandard.org/current",
+        "revision": "2026d (PS3.15 2026b)"
+      },
+      "copyright": ["Copyright NEMA. DICOM is the registered trademark of the National Electrical Manufacturers Association for its Standards publications relating to digital communications of medical information."],
+      "license": "NEMA copyright; implementation needs no licence",
+      "license_files": [],
+      "notice": "courtesy",
+      "status": "ok",
+      "text": "UID registry, IOD module tables, SR templates, Context Groups and the DICOM Controlled Terminology, de-identification profiles, transfer syntaxes, body-part mappings and the Grayscale Standard Display Function constants are taken from the DICOM Standard. No licence or fee is required to implement the Standard; attribution and the trademark statement are recommended."
+    },
+    {
+      "id": "snomed-ct-dicom-subset",
+      "title": "SNOMED CT concepts published in DICOM PS3.16 (SNOMED CT - DICOM subset)",
+      "kind": "terminology",
+      "paths": ["src/codes/sct.rs", "src/codes/tables.rs", "src/sr/template_catalog_tables.rs", "src/multiframe/bodyparts.rs", "src/deid/tables.rs", "src/parametricmap/write.rs", "src/sr/image_library_extract.rs", "src/sr/measurement_context_read.rs"],
+      "upstream": {
+        "project": "SNOMED CT International Edition as incorporated in DICOM PS3.16 2026d",
+        "url": "https://www.snomed.org/ ; https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_2.html",
+        "revision": "PS3.16 2026d (SNOMED CT International Edition 2021-07-31 as cited there)"
+      },
+      "copyright": ["SNOMED CT is copyright International Health Terminology Standards Development Organisation (SNOMED International). SNOMED CT was originally created by the College of American Pathologists. 'SNOMED' and 'SNOMED CT' are registered trademarks of SNOMED International."],
+      "license": "SNOMED CT - DICOM agreement (use in DICOM-conformant applications without further licence or fee)",
+      "license_files": [],
+      "notice": "required",
+      "status": "ok",
+      "text": "8059 SNOMED CT concepts (codes and the Code Meanings PS3.16 gives them), all from PS3.16, used by permission of SNOMED International under the agreement between NEMA and SNOMED International. Use beyond the terms published in the DICOM Standard, or of concepts outside the DICOM subset, is subject to SNOMED CT licensing. Veterinary concepts from the VetSCT extension are included in PS3.16 by permission of the Veterinary Terminology Services Laboratory."
+    },
+    {
+      "id": "loinc",
+      "title": "LOINC codes published in DICOM PS3.16",
+      "kind": "terminology",
+      "paths": ["src/codes/ln.rs", "src/codes/tables.rs", "src/sr/template_catalog_tables.rs", "src/sr/image_library_structured.rs", "src/ultrasound.rs", "src/deid/tables.rs"],
+      "upstream": {
+        "project": "LOINC (Logical Observation Identifiers Names and Codes) as referenced by DICOM PS3.16 2026d",
+        "url": "https://loinc.org/license/",
+        "revision": "PS3.16 2026d"
+      },
+      "copyright": ["LOINC is copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee. LOINC is a registered United States trademark of Regenstrief Institute, Inc."],
+      "license": "LOINC Copyright Notice and License (no fee)",
+      "license_files": ["third_party/licenses/LOINC-notice.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "893 LOINC codes with the Code Meanings PS3.16 gives them. The LOINC licence permits incorporation into software without fee, provided the product carries LOINC's short notice, the code content is not changed and each code is shown with one of LOINC's display names."
+    },
+    {
+      "id": "ucum",
+      "title": "UCUM unit codes published in DICOM PS3.16",
+      "kind": "terminology",
+      "paths": ["src/codes/ucum.rs", "src/codes/tables.rs"],
+      "upstream": {
+        "project": "Unified Code for Units of Measure",
+        "url": "https://ucum.org/license",
+        "revision": "UCUM License 1.1 (June 2024)"
+      },
+      "copyright": ["Copyright (c) 1999-2024 Regenstrief Institute, Inc. All rights reserved."],
+      "license": "UCUM License 1.1 (no fee)",
+      "license_files": ["third_party/licenses/UCUM-notice.txt"],
+      "notice": "required",
+      "status": "ok",
+      "text": "205 UCUM unit codes as DICOM PS3.16 uses them. The UCUM licence asks for a copyright notice, a reference to the licence and to its warranty disclaimer."
+    },
+    {
+      "id": "umls",
+      "title": "UMLS concept identifiers published in DICOM PS3.16",
+      "kind": "terminology",
+      "paths": ["src/codes/umls.rs", "src/codes/tables.rs", "src/sr/template_catalog_tables.rs", "src/multiframe/bodyparts.rs", "src/sr/measurement_context_read.rs", "src/deid/tables.rs"],
+      "upstream": {
+        "project": "UMLS Metathesaurus concept unique identifiers (CUIs), National Library of Medicine",
+        "url": "https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/license_agreement.html",
+        "revision": "PS3.16 2026d"
+      },
+      "copyright": ["UMLS is a registered trademark of the National Library of Medicine."],
+      "license": "UMLS Metathesaurus License (as published in DICOM PS3.16)",
+      "license_files": [],
+      "notice": "courtesy",
+      "status": "ok",
+      "text": "60 UMLS CUIs with the Code Meanings PS3.16 gives them, taken from the DICOM Standard, not from a Metathesaurus release."
+    },
+    {
+      "id": "other-ps3-16-vocabularies",
+      "title": "Other coding schemes referenced by DICOM PS3.16",
+      "kind": "terminology",
+      "paths": ["src/codes/tables.rs", "src/sr/template_catalog_tables.rs"],
+      "upstream": {
+        "project": "ISO/IEEE 11073-10101 (MDC, 1330 codes), IBSI (147), RadLex (83), FMA (45), NCDR (39), MeSH (11), NEU (11), BARI (8), UNS (8), BI-RADS (4), ITIS (3), NDC (2), RxNorm (1), PubChem (1), ICD-10 (1), CSD (1)",
+        "url": "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_2.html",
+        "revision": "PS3.16 2026d"
+      },
+      "copyright": ["ISO/IEEE 11073 nomenclature: copyright IEEE, reprinted in DICOM by permission. BI-RADS: copyright American College of Radiology, licensed to DICOM. RadLex: copyright RSNA. FMA: University of Washington. ICD-10: copyright World Health Organization."],
+      "license": "various, as published in DICOM PS3.16",
+      "license_files": [],
+      "notice": "courtesy",
+      "status": "ok",
+      "text": "Codes and Code Meanings of these schemes appear only as DICOM PS3.16 publishes them in its Context Groups and templates."
+    },
+    {
+      "id": "test-vectors",
+      "title": "Published test vectors",
+      "kind": "test-vector",
+      "paths": ["src/dsig/hash.rs", "src/deid/uid.rs", "src/net/dicomweb/websocket.rs"],
+      "upstream": {
+        "project": "FIPS 180 (SHA-1), the RIPEMD-160 authors' test values, RFC 4231 test case 2 (HMAC), RFC 6455 section 1.3 example",
+        "url": "https://csrc.nist.gov/ ; https://www.rfc-editor.org/",
+        "revision": "-"
+      },
+      "copyright": [],
+      "license": "facts / public domain (FIPS)",
+      "license_files": [],
+      "notice": "none",
+      "status": "ok",
+      "text": "Short known-answer values in unit tests; no notice is required."
+    },
+    {
+      "id": "codec-standards",
+      "title": "Normative tables of image and compression standards",
+      "kind": "standard-content",
+      "paths": ["src/codec/", "src/icc/", "src/transfer/"],
+      "upstream": {
+        "project": "ITU-T T.81 (JPEG), T.87 (JPEG-LS), ISO/IEC 15444-1/-2/-15 (JPEG 2000, HTJ2K), ISO/IEC 18181-1/-2 (JPEG XL), RFC 1950/1951 (zlib/DEFLATE), ICC.1 (profiles), Adobe RGB (1998) colorimetry",
+        "url": "-",
+        "revision": "-"
+      },
+      "copyright": [],
+      "license": "standards (facts needed for interoperability)",
+      "license_files": [],
+      "notice": "none",
+      "status": "ok",
+      "text": "Huffman, quantization, context and transform constants defined by these standards, written from the standards. 'Adobe RGB (1998)' is a trademark of Adobe; the profile written by icc::build is described as compatible with it."
+    },
+    {
+      "id": "test-fixtures",
+      "title": "Synthetic test data of the integration tests",
+      "kind": "test-vector",
+      "paths": ["tests/reference_cases/", "tests/data/pki/"],
+      "upstream": {
+        "project": "Made for this package: reference cases (synthetic data sets, frames, codestreams, keys and texts, with the results a reference implementation of the same behaviour gave) and a throw-away test PKI generated with openssl (O=Example Test)",
+        "url": "-",
+        "revision": "-"
+      },
+      "copyright": [],
+      "license": "same as the package",
+      "license_files": [],
+      "notice": "none",
+      "status": "ok",
+      "text": "No patient data: names, identifiers and pixels are made up. The private keys under tests/data/pki/ are test material and protect nothing."
+    }
+  ]
+}

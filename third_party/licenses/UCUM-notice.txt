@@ -1,0 +1,5 @@
+This product includes UCUM unit codes as published in DICOM PS3.16.
+UCUM is Copyright (c) 1999-2024 Regenstrief Institute, Inc. All rights
+reserved. Licensed under the UCUM License, Version 1.1; the License is at
+https://ucum.org/license. UCUM content is distributed on an "AS IS" basis,
+without warranties or conditions of any kind, either express or implied.
